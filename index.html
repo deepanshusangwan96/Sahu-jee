@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html lang="en" data-theme="dark">
 <head>
@@ -558,6 +559,7 @@ tr:hover td { background:var(--surface2); }
   <div class="app-logo">SAHU JEE 🚀</div>
   <div class="header-right">
     <div class="clock-display" id="liveClock">00:00:00</div>
+    <button class="theme-btn" id="trailToggleBtn" title="Cursor Trail ON/OFF" onclick="toggleTrail()" style="font-size:1rem;">✨</button>
     <div class="cursor-picker" id="cursorPicker">
       <button class="theme-btn" id="cursorBtn" title="Change cursor">🖱️</button>
       <div class="cursor-dropdown" id="cursorDropdown">
@@ -573,25 +575,6 @@ tr:hover td { background:var(--surface2); }
       <div class="theme-dropdown" id="themeDropdown">
         <div class="theme-option" data-theme="dark">🌙 Dark</div>
 
-        <!-- Custom Sessions -->
-        <div class="pomo-settings-card" style="margin-top:12px;">
-          <div class="pomo-settings-title">📋 Custom Sessions</div>
-          <div style="font-size:0.78rem;color:var(--text2);margin-bottom:10px;">
-            Apni marzi se session banao — name + duration
-          </div>
-          <div id="pomo-custom-sessions-list"></div>
-          <div style="display:grid;grid-template-columns:1fr 80px auto;gap:8px;margin-top:10px;align-items:end;">
-            <div class="form-group" style="margin:0">
-              <label style="font-size:0.72rem;color:var(--text2);">Session Name</label>
-              <input type="text" id="pomo-cs-name" placeholder="e.g. Revision, DPP, PYQ" style="padding:8px 10px;font-size:0.85rem;">
-            </div>
-            <div class="form-group" style="margin:0">
-              <label style="font-size:0.72rem;color:var(--text2);">Mins</label>
-              <input type="number" id="pomo-cs-mins" value="30" min="1" max="180" style="padding:8px 10px;font-size:0.85rem;">
-            </div>
-            <button class="btn btn-primary btn-sm" onclick="pomoAddCustomSession()" style="margin-bottom:1px;">➕ Add</button>
-          </div>
-        </div>
         <div class="theme-option" data-theme="light">☀️ Light</div>
         <div class="theme-option" data-theme="love">💜 Love</div>
         <div class="theme-option" data-theme="ocean">🌊 Ocean</div>
@@ -2761,7 +2744,36 @@ document.addEventListener('keydown', e => { if (e.key === 'Escape') closePTOverl
 
   let particles = [];
 
+  let trailEnabled = localStorage.getItem('sj_trail') !== 'off';
+
+  function toggleTrail() {
+    trailEnabled = !trailEnabled;
+    localStorage.setItem('sj_trail', trailEnabled ? 'on' : 'off');
+    const btn = document.getElementById('trailToggleBtn');
+    if (btn) {
+      btn.textContent = trailEnabled ? '✨' : '⬜';
+      btn.title = trailEnabled ? 'Trail ON — Click to turn OFF' : 'Trail OFF — Click to turn ON';
+      btn.style.opacity = trailEnabled ? '1' : '0.4';
+    }
+    if (!trailEnabled) {
+      particles = [];
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+    }
+  }
+
+  // Set initial button state
+  window.toggleTrail = toggleTrail;
+  setTimeout(() => {
+    const btn = document.getElementById('trailToggleBtn');
+    if (btn) {
+      btn.textContent = trailEnabled ? '✨' : '⬜';
+      btn.title = trailEnabled ? 'Trail ON — Click to turn OFF' : 'Trail OFF — Click to turn ON';
+      btn.style.opacity = trailEnabled ? '1' : '0.4';
+    }
+  }, 500);
+
   function spawnTrail(x, y) {
+    if (!trailEnabled) return;
     const cfg = trailConfigs[cursorStyle];
     if (!cfg) return;
     const burst = Math.floor(cfg.count / 6) + 1;
