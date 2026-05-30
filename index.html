@@ -1,0 +1,3013 @@
+
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SAHU JEE 🚀</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='url(%23g)'/%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%237c6dfa'/%3E%3Cstop offset='1' stop-color='%23a78bfa'/%3E%3C/linearGradient%3E%3C/defs%3E%3Ctext x='50' y='68' text-anchor='middle' font-family='Arial Black,sans-serif' font-weight='900' font-size='44' fill='white'%3ESJ%3C/text%3E%3C/svg%3E">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%239b8dff'/%3E%3Cstop offset='100%25' stop-color='%235b4ddb'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' rx='22' fill='url(%23g)'/%3E%3Crect x='5' y='5' width='90' height='90' rx='18' fill='none' stroke='rgba(255,255,255,0.15)' stroke-width='1.5'/%3E%3Ctext x='50' y='62' font-family='Arial Black,Arial,sans-serif' font-weight='900' font-size='42' fill='white' text-anchor='middle' letter-spacing='-2'%3ESJ%3C/text%3E%3Ccircle cx='72' cy='28' r='8' fill='%23ff6b6b' opacity='0.9'/%3E%3Cpath d='M68 28 L72 20 L76 28' fill='white' opacity='0.9'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<style>
+/* ===== GLOBAL VARS ===== */
+:root {
+  --bg: #0a0a0f; --surface: #13131a; --surface2: #1c1c28; --border: #2a2a3d;
+  --text: #e8e8f0; --text2: #8888aa; --text3: #5555aa;
+  --accent: #7c6dfa; --accent2: #a78bfa;
+  --green: #22c55e; --yellow: #eab308; --red: #ef4444;
+  --green-bg: rgba(34,197,94,0.1); --yellow-bg: rgba(234,179,8,0.1); --red-bg: rgba(239,68,68,0.1);
+  --phy: #6366f1; --chem: #22d3a5; --math: #f97316;
+  --shadow: 0 4px 24px rgba(0,0,0,0.4); --radius: 16px;
+}
+[data-theme="light"] {
+  --bg: #f0f0f7; --surface: #ffffff; --surface2: #e8e8f5; --border: #d0d0e8;
+  --text: #1a1a2e; --text2: #6666aa; --text3: #9999cc;
+  --shadow: 0 4px 24px rgba(100,100,200,0.1);
+}
+[data-theme="love"] {
+  --bg: #fff0f5; --surface: #ffffff; --surface2: #ffe0ec; --border: #ffb3ce;
+  --text: #5a0020; --text2: #b0406a; --text3: #d47090;
+  --accent: #e91e8c; --accent2: #ff4daa;
+  --shadow: 0 4px 24px rgba(233,30,140,0.12);
+}
+[data-theme="ocean"] {
+  --bg: #e8f7ff; --surface: #ffffff; --surface2: #d0eeff; --border: #90cff0;
+  --text: #002a40; --text2: #2a7aaa; --text3: #60aacc;
+  --accent: #0096c7; --accent2: #00b4d8;
+  --shadow: 0 4px 24px rgba(0,150,199,0.12);
+}
+[data-theme="forest"] {
+  --bg: #edfff3; --surface: #ffffff; --surface2: #d6f5e3; --border: #90dba8;
+  --text: #002a12; --text2: #2a7a4a; --text3: #60aa78;
+  --accent: #16a34a; --accent2: #22c55e;
+  --shadow: 0 4px 24px rgba(22,163,74,0.12);
+}
+[data-theme="sunset"] {
+  --bg: #fff8f0; --surface: #ffffff; --surface2: #ffe8d0; --border: #ffbf80;
+  --text: #3a1500; --text2: #b05a10; --text3: #d4884a;
+  --accent: #ea580c; --accent2: #f97316;
+  --shadow: 0 4px 24px rgba(234,88,12,0.12);
+}
+[data-theme="galaxy"] {
+  --bg: #f5f0ff; --surface: #ffffff; --surface2: #ede0ff; --border: #c9a0f0;
+  --text: #1a0040; --text2: #6a30b0; --text3: #9a60d0;
+  --accent: #7c3aed; --accent2: #9333ea;
+  --shadow: 0 4px 24px rgba(124,58,237,0.12);
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+html,body { height:100%; }
+body { font-family:'Outfit',sans-serif; background:var(--bg); color:var(--text); overflow-x:hidden; transition:background 0.3s,color 0.3s; cursor:none; }
+#sj-bg-canvas { position:fixed; top:0; left:0; width:100%; height:100%; pointer-events:none; z-index:0; opacity:0.55; }
+.app-header, .main-nav, .screen, .tool-panel { position:relative; z-index:1; }
+
+/* ===== CUSTOM CURSOR ===== */
+#sj-cursor {
+  position:fixed; width:12px; height:12px;
+  background:var(--accent); border-radius:50%;
+  pointer-events:none; z-index:99999;
+  transform:translate(-50%,-50%);
+  transition:transform 0.1s ease, background 0.2s;
+  mix-blend-mode:difference;
+}
+#sj-cursor-ring {
+  position:fixed; width:38px; height:38px;
+  border:1.5px solid rgba(124,109,250,0.5);
+  border-radius:50%; pointer-events:none;
+  z-index:99998; transform:translate(-50%,-50%);
+  transition:all 0.15s ease;
+  mix-blend-mode:difference;
+}
+#sj-cursor.hovered { transform:translate(-50%,-50%) scale(2.5); }
+#sj-cursor-ring.hovered { transform:translate(-50%,-50%) scale(1.5); border-color:rgba(124,109,250,0.8); }
+
+/* cursor style variants */
+body[data-cursor="ring"] #sj-cursor { width:12px;height:12px;border-radius:50%;background:var(--accent);border:none; }
+body[data-cursor="ring"] #sj-cursor-ring { width:38px;height:38px;border-radius:50%;border:1.5px solid rgba(124,109,250,0.5);background:transparent; }
+
+body[data-cursor="dot"] #sj-cursor { width:8px;height:8px;border-radius:50%;background:var(--accent);mix-blend-mode:normal; }
+body[data-cursor="dot"] #sj-cursor-ring { display:none; }
+
+body[data-cursor="cross"] #sj-cursor { width:20px;height:20px;background:transparent;border-radius:0;
+  border-top:2px solid var(--accent);border-left:2px solid var(--accent);
+  transform:translate(-50%,-50%) rotate(45deg); }
+body[data-cursor="cross"] #sj-cursor-ring { width:6px;height:6px;background:var(--accent);border:none;border-radius:50%; }
+
+body[data-cursor="square"] #sj-cursor { width:14px;height:14px;border-radius:2px;background:transparent;border:2px solid var(--accent); }
+body[data-cursor="square"] #sj-cursor-ring { width:32px;height:32px;border-radius:4px;border:1px solid rgba(124,109,250,0.4);background:transparent; }
+
+body[data-cursor="glow"] #sj-cursor { width:16px;height:16px;border-radius:50%;
+  background:var(--accent);box-shadow:0 0 12px 4px var(--accent),0 0 24px 8px rgba(124,109,250,0.4);
+  mix-blend-mode:normal; }
+body[data-cursor="glow"] #sj-cursor-ring { width:44px;height:44px;border-radius:50%;
+  border:1px solid rgba(124,109,250,0.2);
+  background:radial-gradient(circle,rgba(124,109,250,0.08),transparent 70%); }
+
+/* cursor picker dropdown same style as theme */
+.cursor-picker { position:relative; }
+.cursor-dropdown {
+  display:none; position:absolute; right:0; top:46px;
+  background:var(--surface); border:1px solid var(--border);
+  border-radius:12px; overflow:hidden; z-index:999;
+  box-shadow:var(--shadow); min-width:160px;
+}
+.cursor-picker.open .cursor-dropdown { display:block; }
+.cursor-option {
+  padding:10px 16px; cursor:pointer;
+  font-size:0.85rem; color:var(--text); transition:background 0.15s;
+}
+.cursor-option:hover { background:var(--surface2); }
+.cursor-option.active { background:var(--accent); color:#fff; }
+
+/* ===== TOP HEADER ===== */
+.app-header {
+  position:sticky; top:0; z-index:200;
+  background:var(--surface); border-bottom:1px solid var(--border);
+  padding:0 20px; height:60px;
+  display:flex; align-items:center; justify-content:space-between;
+  backdrop-filter:blur(12px); box-shadow:var(--shadow);
+}
+.app-logo {
+  font-family:'Space Mono',monospace; font-weight:700; font-size:1.1rem;
+  background:linear-gradient(135deg,var(--accent2),var(--chem));
+  -webkit-background-clip:text; -webkit-text-fill-color:transparent;
+  letter-spacing:-1px;
+}
+.header-right { display:flex; gap:10px; align-items:center; }
+.theme-btn {
+  background:var(--surface2); border:1px solid var(--border);
+  color:var(--text); width:38px; height:38px; border-radius:50%; cursor:pointer;
+  font-size:1rem; display:flex; align-items:center; justify-content:center; transition:all 0.2s;
+}
+.theme-btn:hover { background:var(--accent); border-color:var(--accent); }
+.theme-picker { position:relative; }
+.theme-dropdown {
+  display:none; position:absolute; right:0; top:46px;
+  background:var(--surface); border:1px solid var(--border);
+  border-radius:12px; overflow:hidden; z-index:999;
+  box-shadow:var(--shadow); min-width:150px;
+}
+.theme-picker.open .theme-dropdown { display:block; }
+.theme-option {
+  padding:10px 16px; cursor:pointer;
+  font-size:0.85rem; color:var(--text); transition:background 0.15s;
+}
+.theme-option:hover { background:var(--surface2); }
+.theme-option.active { background:var(--accent); color:#fff; }
+
+/* ===== CLOCK ===== */
+.clock-display {
+  font-family:'Space Mono',monospace; font-size:0.9rem; font-weight:700;
+  color:var(--chem); background:var(--surface2); border:1px solid var(--border);
+  padding:6px 14px; border-radius:10px;
+}
+
+/* ===== MAIN NAV (Dashboard / Tools) ===== */
+.main-nav {
+  background:var(--surface); border-bottom:2px solid var(--border);
+  display:flex; padding:0 20px; gap:4px;
+}
+.main-nav-btn {
+  padding:14px 24px; background:none; border:none; cursor:pointer;
+  font-family:'Outfit',sans-serif; font-size:0.95rem; font-weight:600;
+  color:var(--text2); border-bottom:3px solid transparent; margin-bottom:-2px;
+  transition:all 0.2s; display:flex; align-items:center; gap:8px;
+}
+.main-nav-btn:hover { color:var(--text); }
+.main-nav-btn.active { color:var(--accent2); border-bottom-color:var(--accent2); }
+
+/* ===== SCREENS ===== */
+.screen { display:none; }
+.screen.active { display:block; animation:fadeUp 0.3s ease; }
+@keyframes fadeUp { from{opacity:0;transform:translateY(10px)} to{opacity:1;transform:none} }
+
+/* ===== DASHBOARD SCREEN ===== */
+.dash-content { max-width:1100px; margin:0 auto; padding:24px 20px 100px; }
+.dash-section { margin-bottom:28px; }
+.dash-title {
+  font-family:'Space Mono',monospace; font-size:0.8rem; text-transform:uppercase;
+  letter-spacing:2px; color:var(--text2); margin-bottom:16px; padding-left:4px;
+}
+.stat-row { display:grid; grid-template-columns:repeat(4,1fr); gap:14px; }
+.stat-card {
+  background:var(--surface); border:1px solid var(--border); border-radius:var(--radius);
+  padding:18px; box-shadow:var(--shadow); position:relative; overflow:hidden;
+  transition:transform 0.2s;
+}
+.stat-card:hover { transform:translateY(-2px); }
+.stat-card::before { content:''; position:absolute; top:0;left:0;right:0; height:3px; border-radius:var(--radius) var(--radius) 0 0; }
+.stat-card.accent::before { background:linear-gradient(90deg,var(--accent),var(--accent2)); }
+.stat-card.green::before { background:linear-gradient(90deg,var(--green),#34d399); }
+.stat-card.yellow::before { background:linear-gradient(90deg,var(--yellow),#fbbf24); }
+.stat-card.red::before { background:linear-gradient(90deg,var(--red),#fb7185); }
+.stat-label { font-size:0.72rem; color:var(--text2); text-transform:uppercase; letter-spacing:0.5px; font-weight:600; margin-bottom:8px; }
+.stat-value { font-family:'Space Mono',monospace; font-size:1.8rem; font-weight:700; line-height:1; }
+.stat-value.accent { color:var(--accent2); }
+.stat-value.green { color:var(--green); }
+.stat-value.yellow { color:var(--yellow); }
+.stat-value.red { color:var(--red); }
+.stat-sub { font-size:0.72rem; color:var(--text3); margin-top:6px; }
+
+.charts-row { display:grid; grid-template-columns:1fr 1fr 1fr; gap:14px; }
+.chart-card {
+  background:var(--surface); border:1px solid var(--border); border-radius:var(--radius);
+  padding:20px; box-shadow:var(--shadow);
+}
+.chart-card.wide { grid-column:1/3; }
+.chart-title { font-size:0.82rem; font-weight:600; color:var(--text2); margin-bottom:14px; letter-spacing:0.3px; }
+
+.insight-box {
+  background:var(--surface); border:1px solid var(--border); border-radius:var(--radius);
+  padding:18px; margin-top:14px;
+}
+.insight-title { font-size:0.8rem; font-weight:700; color:var(--accent2); margin-bottom:12px; display:flex; align-items:center; gap:8px; }
+.insight-list { display:flex; flex-direction:column; gap:8px; }
+.insight-item {
+  background:var(--surface2); border:1px solid var(--border); border-radius:10px;
+  padding:12px 14px; font-size:0.85rem; color:var(--text2); display:flex; align-items:flex-start; gap:10px;
+}
+.insight-item.warn { border-left:3px solid var(--yellow); }
+.insight-item.good { border-left:3px solid var(--green); }
+.insight-item.bad { border-left:3px solid var(--red); }
+
+/* ===== TOOLS SCREEN ===== */
+.tools-screen { max-width:900px; margin:0 auto; padding:30px 20px 100px; }
+.tools-header { text-align:center; margin-bottom:30px; }
+.tools-header h2 { font-size:1.8rem; font-weight:800; }
+.tools-header p { color:var(--text2); margin-top:6px; }
+.tools-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
+.tool-card {
+  background:var(--surface); border:1px solid var(--border); border-radius:20px;
+  padding:24px; cursor:pointer; text-align:center; transition:all 0.25s;
+  position:relative; overflow:hidden;
+}
+.tool-card::before { content:''; position:absolute; inset:0; opacity:0; transition:opacity 0.2s; }
+.tool-card:hover { transform:translateY(-4px); border-color:var(--accent); box-shadow:0 12px 32px rgba(124,109,250,0.15); }
+.tool-card:hover::before { opacity:0.04; background:var(--accent); }
+.tool-icon { font-size:2.4rem; margin-bottom:12px; }
+.tool-name { font-weight:700; font-size:1rem; margin-bottom:6px; }
+.tool-desc { font-size:0.8rem; color:var(--text2); line-height:1.4; }
+
+/* ===== TOOL PANEL (inside tools) ===== */
+.tool-panel { display:none; }
+.tool-panel.active { display:block; animation:fadeUp 0.3s ease; }
+.tool-panel-header {
+  display:flex; align-items:center; gap:14px; padding:20px 20px 0;
+  max-width:1000px; margin:0 auto; margin-bottom:0;
+}
+.back-btn {
+  background:var(--surface2); border:1px solid var(--border); color:var(--text2);
+  padding:8px 16px; border-radius:10px; cursor:pointer; font-family:'Outfit',sans-serif;
+  font-size:0.85rem; font-weight:600; transition:all 0.2s; display:flex; align-items:center; gap:6px;
+}
+.back-btn:hover { border-color:var(--accent); color:var(--accent2); }
+.tool-panel-title { font-size:1.3rem; font-weight:700; }
+.tool-inner { max-width:1000px; margin:0 auto; padding:20px 20px 100px; }
+
+/* ===== SHARED FORM STYLES ===== */
+.card {
+  background:var(--surface); border:1px solid var(--border); border-radius:var(--radius);
+  padding:20px; box-shadow:var(--shadow); margin-bottom:16px;
+}
+.form-grid { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+.form-group { display:flex; flex-direction:column; gap:6px; }
+.form-group.full { grid-column:1/-1; }
+label { font-size:0.78rem; font-weight:600; color:var(--text2); text-transform:uppercase; letter-spacing:0.5px; }
+input[type=text],input[type=number],input[type=date],input[type=datetime-local],textarea,select {
+  background:var(--surface2); border:1.5px solid var(--border); color:var(--text);
+  padding:10px 14px; border-radius:10px; font-family:'Outfit',sans-serif; font-size:0.92rem;
+  outline:none; transition:border-color 0.2s; width:100%; -webkit-appearance:none;
+}
+input:focus,select:focus,textarea:focus { border-color:var(--accent); box-shadow:0 0 0 3px rgba(124,109,250,0.12); }
+textarea { resize:vertical; min-height:70px; }
+select option { background:var(--surface); }
+.btn {
+  padding:10px 22px; border-radius:10px; cursor:pointer;
+  font-family:'Outfit',sans-serif; font-size:0.9rem; font-weight:600;
+  border:none; transition:all 0.2s; display:inline-flex; align-items:center; gap:8px;
+}
+.btn-primary { background:var(--accent); color:#fff; }
+.btn-primary:hover { background:var(--accent2); transform:translateY(-1px); }
+.btn-ghost { background:transparent; border:1px solid var(--border); color:var(--text2); }
+.btn-ghost:hover { border-color:var(--accent); color:var(--accent2); }
+.btn-danger { background:rgba(239,68,68,0.1); color:var(--red); border:1px solid rgba(239,68,68,0.2); }
+.btn-danger:hover { background:var(--red); color:#fff; }
+.btn-sm { padding:6px 12px; font-size:0.78rem; border-radius:8px; }
+.form-actions { display:flex; gap:10px; margin-top:14px; justify-content:flex-end; }
+
+/* ===== TOOL TABS ===== */
+.tool-tabs { display:flex; gap:4px; margin-bottom:16px; background:var(--surface2); border-radius:12px; padding:4px; }
+.tool-tab {
+  flex:1; padding:9px; border-radius:9px; cursor:pointer; text-align:center;
+  font-size:0.85rem; font-weight:600; color:var(--text2); border:none; background:none;
+  font-family:'Outfit',sans-serif; transition:all 0.2s;
+}
+.tool-tab.active { background:var(--accent); color:#fff; }
+
+/* ===== SECTION LABEL ===== */
+.section-label {
+  font-size:0.72rem; text-transform:uppercase; letter-spacing:1px;
+  color:var(--text2); font-weight:700; margin:16px 0 10px;
+}
+
+/* ===== TARGET CARDS (Todo) ===== */
+.target-card {
+  background:var(--surface2); border:1px solid var(--border); border-radius:12px;
+  padding:14px; margin-bottom:8px; display:flex; justify-content:space-between;
+  align-items:center; cursor:pointer; border-left:4px solid var(--accent);
+  transition:all 0.2s;
+}
+.target-card:hover { border-color:var(--accent2); }
+.target-card.done { border-left-color:var(--green); opacity:0.6; }
+.target-card.done .tc-task { text-decoration:line-through; }
+.tc-left { flex:1; }
+.tc-sub { font-size:0.72rem; font-weight:700; text-transform:uppercase; letter-spacing:0.5px; margin-bottom:4px; }
+.tc-sub.Physics { color:var(--phy); }
+.tc-sub.Chemistry { color:var(--chem); }
+.tc-sub.Maths { color:var(--math); }
+.tc-task { font-weight:600; font-size:0.92rem; }
+.tc-date { font-size:0.72rem; color:var(--text3); margin-top:3px; }
+.tc-right { display:flex; gap:8px; align-items:center; }
+
+/* ===== TEST REMINDER CARDS ===== */
+.test-card {
+  background:var(--surface); border:1px solid var(--border); border-radius:var(--radius);
+  padding:16px 18px; box-shadow:var(--shadow); transition:transform 0.2s;
+  position:relative; overflow:hidden; margin-bottom:10px;
+}
+.test-card:hover { transform:translateY(-2px); }
+.test-card::before { content:''; position:absolute; left:0;top:0;bottom:0; width:4px; }
+.test-card.green::before { background:var(--green); }
+.test-card.yellow::before { background:var(--yellow); }
+.test-card.red::before { background:var(--red); }
+.test-card.upcoming-todo { opacity:0.75; filter:blur(0.3px); border-style:dashed; }
+.card-top { display:flex; justify-content:space-between; align-items:flex-start; gap:12px; }
+.card-name { font-weight:700; font-size:1rem; }
+.card-date { font-size:0.75rem; color:var(--text2); margin-top:3px; }
+.card-badge {
+  padding:4px 12px; border-radius:20px; font-size:0.72rem; font-weight:700; white-space:nowrap;
+}
+.badge-green { background:var(--green-bg); color:var(--green); }
+.badge-yellow { background:var(--yellow-bg); color:var(--yellow); }
+.badge-red { background:var(--red-bg); color:var(--red); }
+.badge-todo { background:rgba(124,109,250,0.1); color:var(--accent2); }
+.countdown { font-family:'Space Mono',monospace; font-size:0.88rem; margin:10px 0; display:flex; gap:8px; flex-wrap:wrap; align-items:center; }
+.cd-unit { text-align:center; }
+.cd-num { display:block; font-size:1.1rem; line-height:1; }
+.cd-label { font-size:0.55rem; color:var(--text2); font-family:'Outfit',sans-serif; }
+.cd-sep { color:var(--border); }
+.card-chips { display:flex; flex-wrap:wrap; gap:5px; margin-top:8px; }
+.card-chip { padding:2px 8px; border-radius:20px; font-size:0.7rem; background:var(--surface2); border:1px solid var(--border); color:var(--text2); }
+.card-note { font-size:0.8rem; color:var(--text2); margin-top:8px; font-style:italic; border-left:2px solid var(--border); padding-left:10px; }
+.card-actions { display:flex; gap:8px; margin-top:12px; }
+
+/* ===== MOCK TRACKER ===== */
+.subject-row-3 { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin-bottom:14px; }
+.subject-block-m {
+  background:var(--surface2); border:1.5px solid var(--border); border-radius:12px; padding:14px;
+}
+.subject-block-title { font-size:0.8rem; font-weight:700; color:var(--text2); margin-bottom:10px; text-transform:uppercase; letter-spacing:0.5px; }
+.marks-row { display:flex; gap:8px; align-items:center; }
+.marks-row input { flex:1; }
+.marks-sep { color:var(--text3); font-weight:700; }
+
+/* ===== WEAKNESS CARDS ===== */
+.weakness-grid-3 { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; }
+.weakness-card {
+  background:var(--surface2); border:1.5px solid var(--border); border-radius:12px; padding:14px;
+  transition:all 0.2s;
+}
+.weakness-card.low { border-color:var(--red); background:rgba(239,68,68,0.04); }
+.weakness-card.mid { border-color:var(--yellow); background:rgba(234,179,8,0.04); }
+.weakness-card.high { border-color:var(--green); background:rgba(34,197,94,0.04); }
+.weakness-subj { font-weight:700; font-size:0.95rem; margin-bottom:4px; }
+.weakness-avg { font-size:1.5rem; font-weight:800; }
+.weakness-avg.low { color:var(--red); }
+.weakness-avg.mid { color:var(--yellow); }
+.weakness-avg.high { color:var(--green); }
+.weakness-label { font-size:0.75rem; color:var(--text2); margin-top:4px; }
+.weakness-bar { height:5px; border-radius:3px; background:var(--border); margin-top:8px; overflow:hidden; }
+.weakness-fill { height:100%; border-radius:3px; transition:width 0.5s ease; }
+
+/* ===== SYLLABUS ===== */
+.checklist-grid-s { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:16px; }
+.checklist-subject { }
+.checklist-subject-title {
+  font-weight:700; font-size:0.92rem; padding:12px 14px;
+  border-radius:12px 12px 0 0; color:white; display:flex; justify-content:space-between; align-items:center;
+}
+.checklist-items-wrap {
+  border:1.5px solid var(--border); border-top:none; border-radius:0 0 12px 12px;
+  overflow:hidden; max-height:420px; overflow-y:auto;
+}
+.chap-block { border-bottom:1px solid var(--border); }
+.chap-block:last-child { border-bottom:none; }
+.chap-header {
+  display:flex; align-items:center; gap:8px; padding:10px 14px;
+  cursor:pointer; transition:background 0.15s; user-select:none;
+}
+.chap-header:hover { background:var(--surface2); }
+.chap-toggle { font-size:0.6rem; color:var(--text3); min-width:12px; transition:transform 0.2s; }
+.chap-toggle.open { transform:rotate(90deg); }
+.chap-name { flex:1; font-size:0.85rem; font-weight:600; }
+.chap-count {
+  font-size:0.72rem; font-weight:700; background:var(--surface2); border:1px solid var(--border);
+  padding:2px 8px; border-radius:20px; color:var(--text2);
+}
+.chap-count.all-done { background:rgba(34,197,94,0.15); color:var(--green); border-color:var(--green); }
+.chap-topics { display:none; background:var(--bg); border-top:1px solid var(--border); }
+.chap-topics.open { display:block; }
+.chapter-row {
+  display:flex; align-items:center; gap:10px; padding:9px 14px 9px 26px;
+  border-bottom:1px solid var(--border); cursor:pointer; transition:background 0.15s;
+}
+.chapter-row:last-child { border-bottom:none; }
+.chapter-row:hover { background:var(--surface2); }
+.chapter-row.completed span { text-decoration:line-through; opacity:0.5; }
+.chapter-row input[type=checkbox] { pointer-events:none; width:16px; height:16px; min-width:16px; cursor:pointer; }
+.subj-progress-bar { height:3px; background:var(--border); }
+.subj-progress-fill { height:100%; transition:width 0.5s ease; }
+
+/* ===== QUE TRACKER ===== */
+.page-header { margin-bottom:18px; }
+.page-title { font-size:1.3rem; font-weight:700; letter-spacing:-0.3px; }
+.page-sub { font-size:0.85rem; color:var(--text3); margin-top:4px; }
+.stats-grid-q { display:grid; grid-template-columns:repeat(4,1fr); gap:12px; margin-bottom:20px; }
+.graphs-grid-q { display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-bottom:20px; }
+.graph-card-q { background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:18px; box-shadow:var(--shadow); }
+.graph-full-q { grid-column:1/-1; }
+.graph-title-q { font-size:0.8rem; font-weight:600; color:var(--text2); margin-bottom:14px; }
+.autocomplete-wrap { position:relative; }
+.autocomplete-list { position:absolute; top:100%; left:0; right:0; z-index:50; background:var(--surface); border:1px solid var(--border); border-radius:10px; overflow:hidden; box-shadow:var(--shadow); display:none; }
+.autocomplete-list.show { display:block; }
+.autocomplete-item { padding:10px 14px; cursor:pointer; font-size:0.88rem; transition:background 0.15s; }
+.autocomplete-item:hover { background:var(--surface2); }
+
+/* ===== HISTORY TABLE ===== */
+.table-wrap { overflow-x:auto; border-radius:12px; border:1px solid var(--border); }
+table { width:100%; border-collapse:collapse; }
+thead { background:var(--surface2); }
+th { padding:10px 14px; text-align:left; font-size:0.72rem; font-weight:700; color:var(--text2); text-transform:uppercase; letter-spacing:0.5px; border-bottom:1px solid var(--border); }
+td { padding:11px 14px; font-size:0.85rem; border-top:1px solid var(--border); }
+tr:hover td { background:var(--surface2); }
+.badge { display:inline-block; padding:3px 10px; border-radius:20px; font-size:0.72rem; font-weight:700; }
+.badge-physics { background:rgba(99,102,241,0.15); color:var(--phy); }
+.badge-chemistry { background:rgba(34,211,165,0.15); color:var(--chem); }
+.badge-mathematics { background:rgba(249,115,22,0.15); color:var(--math); }
+.badge-pct-green { background:rgba(34,197,94,0.15); color:var(--green); }
+.badge-pct-yellow { background:rgba(234,179,8,0.15); color:var(--yellow); }
+.badge-pct-red { background:rgba(239,68,68,0.15); color:var(--red); }
+
+/* ===== HISTORY ACCORDION (Todo) ===== */
+.folder { background:var(--surface); border:1px solid var(--border); border-radius:12px; overflow:hidden; margin-bottom:8px; }
+.folder-header { padding:13px 16px; display:flex; justify-content:space-between; align-items:center; cursor:pointer; transition:background 0.15s; }
+.folder-header:hover { background:var(--surface2); }
+.folder-body { display:none; padding:14px 16px; border-top:1px solid var(--border); background:var(--surface2); }
+.folder-body.open { display:block; }
+
+/* ===== EMPTY STATE ===== */
+.empty-state { text-align:center; padding:50px 20px; color:var(--text2); }
+.empty-state .icon { font-size:3rem; margin-bottom:12px; }
+.empty-state p { font-size:0.92rem; }
+
+/* ===== TOAST ===== */
+#toast {
+  position:fixed; bottom:30px; left:50%; transform:translateX(-50%) translateY(20px);
+  background:linear-gradient(135deg,var(--chem),#059669);
+  color:#fff; padding:12px 22px; border-radius:30px;
+  font-size:0.875rem; font-weight:600; box-shadow:0 8px 24px rgba(34,211,165,0.35);
+  opacity:0; pointer-events:none; transition:all 0.35s; z-index:9999; white-space:nowrap;
+}
+#toast.show { opacity:1; transform:translateX(-50%) translateY(0); }
+
+/* ===== SYLLABUS SELECTOR (Reminder) ===== */
+.syllabus-wrapper-r { display:grid; grid-template-columns:repeat(3,1fr); gap:10px; }
+.subject-block-r { background:var(--surface2); border:1px solid var(--border); border-radius:12px; overflow:hidden; }
+.subject-header-r { padding:10px 14px; font-weight:600; font-size:0.88rem; cursor:pointer; display:flex; justify-content:space-between; align-items:center; user-select:none; }
+.subject-header-r.phy { color:#60a5fa; }
+.subject-header-r.che { color:var(--chem); }
+.subject-header-r.mat { color:#f472b6; }
+.subject-header-r .chevron { transition:transform 0.2s; font-size:0.65rem; }
+.subject-header-r.open .chevron { transform:rotate(180deg); }
+.units-list-r { display:none; padding:6px; }
+.units-list-r.open { display:block; }
+.unit-header-r { padding:6px 10px; font-size:0.78rem; font-weight:600; color:var(--text2); cursor:pointer; border-radius:8px; display:flex; justify-content:space-between; align-items:center; background:var(--surface); border:1px solid var(--border); user-select:none; margin-bottom:4px; transition:background 0.15s; }
+.unit-header-r:hover { background:var(--surface2); }
+.unit-header-r .uchev { font-size:0.55rem; transition:transform 0.2s; }
+.unit-header-r.open .uchev { transform:rotate(180deg); }
+.chapters-list-r { display:none; padding:3px 6px; }
+.chapters-list-r.open { display:block; }
+.chapter-item-r { display:flex; align-items:center; gap:8px; padding:5px 6px; border-radius:6px; cursor:pointer; font-size:0.78rem; color:var(--text2); transition:background 0.15s; }
+.chapter-item-r:hover { background:var(--surface2); }
+.chapter-item-r input[type=checkbox] { accent-color:var(--accent); width:14px; height:14px; cursor:pointer; }
+.selected-chips { display:flex; flex-wrap:wrap; gap:5px; margin-top:8px; min-height:26px; }
+.chip { background:rgba(124,109,250,0.15); border:1px solid rgba(124,109,250,0.3); color:var(--accent2); padding:3px 10px; border-radius:20px; font-size:0.72rem; display:flex; align-items:center; gap:4px; }
+.chip-x { cursor:pointer; opacity:0.7; }
+.chip-x:hover { opacity:1; }
+
+/* ===== EDIT MODAL ===== */
+.edit-modal-overlay {
+  position:fixed; inset:0; background:rgba(0,0,0,0.75); backdrop-filter:blur(8px);
+  display:flex; align-items:center; justify-content:center; z-index:9000;
+  opacity:0; pointer-events:none; transition:opacity 0.25s;
+}
+.edit-modal-overlay.open { opacity:1; pointer-events:all; }
+.edit-modal {
+  background:var(--surface); border:1px solid var(--border); border-radius:20px;
+  padding:24px; max-width:480px; width:90%; max-height:85vh; overflow-y:auto;
+  transform:scale(0.95); transition:transform 0.25s; box-shadow:0 20px 60px rgba(0,0,0,0.4);
+}
+.edit-modal-overlay.open .edit-modal { transform:scale(1); }
+.edit-modal-title { font-weight:700; font-size:1.1rem; margin-bottom:18px; color:var(--accent2); }
+.edit-modal-actions { display:flex; gap:10px; margin-top:18px; justify-content:flex-end; }
+
+/* ===== SCROLLBAR ===== */
+::-webkit-scrollbar { width:6px; height:6px; }
+::-webkit-scrollbar-track { background:transparent; }
+::-webkit-scrollbar-thumb { background:var(--border); border-radius:4px; }
+
+/* ===== RESPONSIVE ===== */
+@media (max-width:768px) {
+  .stat-row { grid-template-columns:1fr 1fr; }
+  .charts-row { grid-template-columns:1fr; }
+  .chart-card.wide { grid-column:1; }
+  .tools-grid { grid-template-columns:1fr 1fr; }
+  .subject-row-3 { grid-template-columns:1fr; }
+  .weakness-grid-3 { grid-template-columns:1fr; }
+  .stats-grid-q { grid-template-columns:1fr 1fr; }
+  .graphs-grid-q { grid-template-columns:1fr; }
+  .graph-full-q { grid-column:1; }
+  .form-grid { grid-template-columns:1fr; }
+  .form-group.full { grid-column:1; }
+  .syllabus-wrapper-r { grid-template-columns:1fr; }
+  .main-nav-btn { padding:12px 14px; font-size:0.85rem; }
+}
+@media (max-width:480px) {
+  .tools-grid { grid-template-columns:1fr; }
+}
+
+</style>
+</head>
+<body>
+
+<!-- ===== TOP HEADER ===== -->
+<canvas id="sj-bg-canvas"></canvas>
+<header class="app-header">
+  <div class="app-logo">SAHU JEE 🚀</div>
+  <div class="header-right">
+    <div class="clock-display" id="liveClock">00:00:00</div>
+    <div class="cursor-picker" id="cursorPicker">
+      <button class="theme-btn" id="cursorBtn" title="Change cursor">🖱️</button>
+      <div class="cursor-dropdown" id="cursorDropdown">
+        <div class="cursor-option active" data-cursor="ring">⭕ Ring</div>
+        <div class="cursor-option" data-cursor="dot">• Dot</div>
+        <div class="cursor-option" data-cursor="cross">✕ Cross</div>
+        <div class="cursor-option" data-cursor="square">▢ Square</div>
+        <div class="cursor-option" data-cursor="glow">✨ Glow</div>
+      </div>
+    </div>
+    <div class="theme-picker" id="themePicker">
+      <button class="theme-btn" id="themeBtn" title="Change theme">🎨</button>
+      <div class="theme-dropdown" id="themeDropdown">
+        <div class="theme-option" data-theme="dark">🌙 Dark</div>
+
+        <!-- Custom Sessions -->
+        <div class="pomo-settings-card" style="margin-top:12px;">
+          <div class="pomo-settings-title">📋 Custom Sessions</div>
+          <div style="font-size:0.78rem;color:var(--text2);margin-bottom:10px;">
+            Apni marzi se session banao — name + duration
+          </div>
+          <div id="pomo-custom-sessions-list"></div>
+          <div style="display:grid;grid-template-columns:1fr 80px auto;gap:8px;margin-top:10px;align-items:end;">
+            <div class="form-group" style="margin:0">
+              <label style="font-size:0.72rem;color:var(--text2);">Session Name</label>
+              <input type="text" id="pomo-cs-name" placeholder="e.g. Revision, DPP, PYQ" style="padding:8px 10px;font-size:0.85rem;">
+            </div>
+            <div class="form-group" style="margin:0">
+              <label style="font-size:0.72rem;color:var(--text2);">Mins</label>
+              <input type="number" id="pomo-cs-mins" value="30" min="1" max="180" style="padding:8px 10px;font-size:0.85rem;">
+            </div>
+            <button class="btn btn-primary btn-sm" onclick="pomoAddCustomSession()" style="margin-bottom:1px;">➕ Add</button>
+          </div>
+        </div>
+        <div class="theme-option" data-theme="light">☀️ Light</div>
+        <div class="theme-option" data-theme="love">💜 Love</div>
+        <div class="theme-option" data-theme="ocean">🌊 Ocean</div>
+        <div class="theme-option" data-theme="forest">🌿 Forest</div>
+        <div class="theme-option" data-theme="sunset">🔥 Sunset</div>
+        <div class="theme-option" data-theme="galaxy">🌌 Galaxy</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ===== MAIN NAV ===== -->
+<nav class="main-nav">
+  <button class="main-nav-btn active" onclick="showMainScreen('dashboard',this)">
+    📊 Dashboard
+  </button>
+  <button class="main-nav-btn" onclick="showMainScreen('tools',this)">
+    🧰 Tools
+  </button>
+</nav>
+
+<!-- ===== DASHBOARD SCREEN ===== -->
+<div id="screen-dashboard" class="screen active">
+  <div class="dash-content">
+    <div class="dash-section">
+      <div class="dash-title">📊 Overview Stats</div>
+      <div class="stat-row">
+        <div class="stat-card accent">
+          <div class="stat-label">Today's Questions</div>
+          <div class="stat-value accent" id="d-today-q">0</div>
+          <div class="stat-sub">Total: <span id="d-total-q">0</span> all time</div>
+        </div>
+        <div class="stat-card green">
+          <div class="stat-label">Syllabus Done</div>
+          <div class="stat-value green" id="d-syl-pct">0%</div>
+          <div class="stat-sub" id="d-syl-sub">topics completed</div>
+        </div>
+        <div class="stat-card yellow">
+          <div class="stat-label">Targets Done Today</div>
+          <div class="stat-value yellow" id="d-targets-done">0</div>
+          <div class="stat-sub" id="d-targets-sub">/ total targets</div>
+        </div>
+        <div class="stat-card red">
+          <div class="stat-label">Last Test Score</div>
+          <div class="stat-value red" id="d-last-mock">—</div>
+          <div class="stat-sub" style="display:flex; flex-direction:column; gap:2px; margin-top:4px;">
+            <span>🏆 Best: <strong id="d-best-mock">—</strong></span>
+            <span>📝 Total: <strong id="d-total-tests">0</strong> tests</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="dash-section">
+      <div class="dash-title">📈 Performance Analysis</div>
+      <div class="charts-row">
+        <div class="chart-card wide">
+          <div class="chart-title">📅 Questions Practiced — Last 7 Days</div>
+          <canvas id="d-weekly-chart" height="160"></canvas>
+        </div>
+        <div class="chart-card">
+          <div class="chart-title">🧪 Subject Breakdown</div>
+          <canvas id="d-subject-chart" height="160"></canvas>
+          <div id="d-subject-legend" style="margin-top:10px;"></div>
+        </div>
+        <div class="chart-card">
+          <div class="chart-title">📊 Monthly Questions — Last 4 Weeks</div>
+          <canvas id="d-monthly-chart" height="160"></canvas>
+        </div>
+        <div class="chart-card wide">
+          <div class="chart-title">🎯 Mock Test Scores Over Time</div>
+          <canvas id="d-mock-chart" height="150"></canvas>
+          <div class="chart-legend" id="d-mock-legend" style="display:flex;gap:14px;flex-wrap:wrap;margin-top:8px;"></div>
+        </div>
+        <div class="chart-card">
+          <div class="chart-title">📚 Syllabus Completion</div>
+          <canvas id="d-syl-chart" height="180"></canvas>
+        </div>
+        <div class="chart-card">
+          <div class="chart-title">🎯 Target Completion % — Last 7 Days</div>
+          <canvas id="d-target-chart" height="180"></canvas>
+        </div>
+      </div>
+    </div>
+
+    <div class="dash-section">
+      <div class="dash-title">💡 Smart Insights</div>
+      <div class="insight-box">
+        <div class="insight-title">🤖 Analysis</div>
+        <div class="insight-list" id="d-insights">
+          <div class="insight-item"><span>📝</span><span>Add some data to see insights here!</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== TOOLS SCREEN ===== -->
+<div id="screen-tools" class="screen">
+  <!-- Tools Grid (selector) -->
+  <div id="tools-home">
+    <div class="tools-screen">
+      <div class="tools-header">
+        <h2>🧰 Your Tools</h2>
+        <p>Click on a tool to open it. Press Back to return.</p>
+      </div>
+      <div class="tools-grid">
+        <div class="tool-card" onclick="openTool('todo')">
+          <div class="tool-icon">🎯</div>
+          <div class="tool-name">To-Do / Targets</div>
+          <div class="tool-desc">Set daily targets, track tasks subject-wise, archive history</div>
+        </div>
+        <div class="tool-card" onclick="openTool('reminder')">
+          <div class="tool-icon">⏰</div>
+          <div class="tool-name">Test Reminder</div>
+          <div class="tool-desc">Add upcoming mock tests with countdown timers & syllabus</div>
+        </div>
+        <div class="tool-card" onclick="openTool('mock')">
+          <div class="tool-icon">📋</div>
+          <div class="tool-name">Mock Test Tracker</div>
+          <div class="tool-desc">Log mock scores, analyse performance, find weak areas</div>
+        </div>
+        <div class="tool-card" onclick="openTool('que')">
+          <div class="tool-icon">📐</div>
+          <div class="tool-name">Question Tracker</div>
+          <div class="tool-desc">Track daily practice sessions, source-wise with graphs</div>
+        </div>
+        <div class="tool-card" onclick="openTool('syllabus')">
+          <div class="tool-icon">📚</div>
+          <div class="tool-name">Syllabus Checklist</div>
+          <div class="tool-desc">Mark chapters done topic-by-topic for all 3 subjects</div>
+        </div>
+        <div class="tool-card" onclick="openTool('periodic')">
+          <div class="tool-icon">⚗️</div>
+          <div class="tool-name">Periodic Table</div>
+          <div class="tool-desc">JEE Edition — click any element for electronic configuration</div>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ====== TODO TOOL ====== -->
+  <div id="tool-todo" class="tool-panel">
+    <div class="tool-panel-header">
+      <button class="back-btn" onclick="closeTool()">← Back</button>
+      <div class="tool-panel-title">🎯 To-Do / Targets</div>
+    </div>
+    <div class="tool-inner">
+      <div class="tool-tabs">
+        <button class="tool-tab active" onclick="showToolTab('todo','add',this)">➕ Add Target</button>
+        <button class="tool-tab" onclick="showToolTab('todo','list',this)">📌 Targets</button>
+        <button class="tool-tab" onclick="showToolTab('todo','history',this)">📂 History</button>
+      </div>
+      <!-- Add -->
+      <div id="todo-tab-add">
+        <div class="card">
+          <h3 style="margin-bottom:14px;font-size:1rem;">🎯 Naya Target</h3>
+          <div class="form-grid">
+            <div class="form-group">
+              <label>Subject</label>
+              <select id="todo-subject">
+                <option>Physics</option><option>Chemistry</option><option>Maths</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Date</label>
+              <input type="date" id="todo-date">
+            </div>
+            <div class="form-group full">
+              <label>Task</label>
+              <input type="text" id="todo-task" placeholder="Kya padhna hai?">
+            </div>
+          </div>
+          <div class="form-actions">
+            <button class="btn btn-primary" onclick="addTodoTask()">Add Target</button>
+          </div>
+        </div>
+      </div>
+      <!-- List -->
+      <div id="todo-tab-list" style="display:none;">
+        <div class="section-label">📌 Current Targets</div>
+        <div id="todo-current-list"></div>
+        <div class="section-label" style="margin-top:20px;">⏳ Upcoming Targets</div>
+        <div id="todo-future-list"></div>
+      </div>
+      <!-- History -->
+      <div id="todo-tab-history" style="display:none;">
+        <div id="todo-history-content"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ====== TEST REMINDER TOOL ====== -->
+  <div id="tool-reminder" class="tool-panel">
+    <div class="tool-panel-header">
+      <button class="back-btn" onclick="closeTool()">← Back</button>
+      <div class="tool-panel-title">⏰ Test Reminder</div>
+    </div>
+    <div class="tool-inner">
+      <div class="tool-tabs">
+        <button class="tool-tab active" onclick="showToolTab('reminder','upcoming',this)">📋 Upcoming</button>
+        <button class="tool-tab" onclick="showToolTab('reminder','add',this)">➕ Add Test</button>
+        <button class="tool-tab" onclick="showToolTab('reminder','history',this)">🗂️ History</button>
+      </div>
+      <!-- Upcoming -->
+      <div id="reminder-tab-upcoming">
+        <div class="section-label">Active Tests</div>
+        <div id="reminder-cards-container"></div>
+      </div>
+      <!-- Add -->
+      <div id="reminder-tab-add" style="display:none;">
+        <div class="card">
+          <h3 style="margin-bottom:14px;font-size:1rem;">📝 Add New Mock Test</h3>
+          <div class="form-grid">
+            <div class="form-group">
+              <label>Test Name</label>
+              <input type="text" id="r-testName" placeholder="e.g. Allen Test, PW Test…">
+            </div>
+            <div class="form-group">
+              <label>Exam Date & Time</label>
+              <input type="datetime-local" id="r-testDate">
+            </div>
+            <div class="form-group full">
+              <label>Syllabus Covered</label>
+              <div class="syllabus-wrapper-r" id="r-syllabusWrapper"></div>
+              <div class="selected-chips" id="r-selectedChips"><span style="font-size:0.78rem;color:var(--text2)">No chapters selected</span></div>
+            </div>
+            <div class="form-group full">
+              <label>Note / Remark</label>
+              <textarea id="r-testNote" placeholder="e.g. Focus on electrostatics…"></textarea>
+            </div>
+          </div>
+          <div class="form-actions">
+            <button class="btn btn-ghost" onclick="clearReminderForm()">Clear</button>
+            <button class="btn btn-primary" onclick="addReminderTest()">Add Test</button>
+          </div>
+        </div>
+      </div>
+      <!-- History -->
+      <div id="reminder-tab-history" style="display:none;">
+        <div class="section-label">Past Tests</div>
+        <div id="reminder-history-container"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ====== MOCK TRACKER TOOL ====== -->
+  <div id="tool-mock" class="tool-panel">
+    <div class="tool-panel-header">
+      <button class="back-btn" onclick="closeTool()">← Back</button>
+      <div class="tool-panel-title">📋 Mock Test Tracker</div>
+    </div>
+    <div class="tool-inner">
+      <div class="tool-tabs">
+        <button class="tool-tab active" onclick="showToolTab('mock','dashboard',this)">📊 Dashboard</button>
+        <button class="tool-tab" onclick="showToolTab('mock','add',this)">➕ Add Test</button>
+        <button class="tool-tab" onclick="showToolTab('mock','history',this)">📋 History</button>
+      </div>
+      <!-- Dashboard -->
+      <div id="mock-tab-dashboard">
+        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:16px;" id="mock-stat-grid"></div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:16px;">
+          <div class="card">
+            <div class="chart-title">📉 Subject Performance</div>
+            <div class="weakness-grid-3" id="mock-weakness-grid"></div>
+          </div>
+          <div class="card">
+            <div class="chart-title">📈 Score Over Time</div>
+            <canvas id="mock-chart-canvas" height="180"></canvas>
+            <div id="mock-chart-legend" style="display:flex;gap:12px;flex-wrap:wrap;margin-top:8px;"></div>
+          </div>
+        </div>
+      </div>
+      <!-- Add -->
+      <div id="mock-tab-add" style="display:none;">
+        <div class="card">
+          <h3 style="margin-bottom:14px;font-size:1rem;">✍️ Add New Mock Test</h3>
+          <div class="form-grid" style="margin-bottom:12px;">
+            <div class="form-group">
+              <label>Test Name</label>
+              <input type="text" id="m-testName" placeholder="e.g. Allen Test 01">
+            </div>
+            <div class="form-group">
+              <label>Date</label>
+              <input type="date" id="m-testDate">
+            </div>
+          </div>
+          <div class="subject-row-3">
+            <div class="subject-block-m">
+              <div class="subject-block-title" style="color:var(--phy);">⚛️ Physics</div>
+              <div class="marks-row">
+                <input type="number" id="m-phyScore" placeholder="Marks" min="0">
+                <span class="marks-sep">/</span>
+                <input type="number" id="m-phyTotal" placeholder="Total" value="120" min="1">
+              </div>
+            </div>
+            <div class="subject-block-m">
+              <div class="subject-block-title" style="color:var(--chem);">🧪 Chemistry</div>
+              <div class="marks-row">
+                <input type="number" id="m-chemScore" placeholder="Marks" min="0">
+                <span class="marks-sep">/</span>
+                <input type="number" id="m-chemTotal" placeholder="Total" value="120" min="1">
+              </div>
+            </div>
+            <div class="subject-block-m">
+              <div class="subject-block-title" style="color:var(--math);">📐 Math</div>
+              <div class="marks-row">
+                <input type="number" id="m-mathScore" placeholder="Marks" min="0">
+                <span class="marks-sep">/</span>
+                <input type="number" id="m-mathTotal" placeholder="Total" value="120" min="1">
+              </div>
+            </div>
+          </div>
+          <div class="form-actions">
+            <button class="btn btn-ghost" id="m-clearBtn">Clear</button>
+            <button class="btn btn-primary" id="m-addBtn">✅ Save Test</button>
+          </div>
+        </div>
+      </div>
+      <!-- History -->
+      <div id="mock-tab-history" style="display:none;">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;">
+          <div class="section-label" style="margin:0;">Test History</div>
+          <button class="btn btn-danger btn-sm" id="mock-clear-all-btn">🗑️ Clear All</button>
+        </div>
+        <div class="card">
+          <div class="table-wrap">
+            <table>
+              <thead><tr>
+                <th>Date</th><th>Test Name</th><th>Physics</th><th>Chemistry</th><th>Math</th><th>Total</th><th>%</th><th>Del</th>
+              </tr></thead>
+              <tbody id="mock-history-body"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ====== QUE TRACKER TOOL ====== -->
+  <div id="tool-que" class="tool-panel">
+    <div class="tool-panel-header">
+      <button class="back-btn" onclick="closeTool()">← Back</button>
+      <div class="tool-panel-title">📐 Question Tracker</div>
+    </div>
+    <div class="tool-inner">
+      <div class="tool-tabs">
+        <button class="tool-tab active" onclick="showToolTab('que','dashboard',this)">📊 Dashboard</button>
+        <button class="tool-tab" onclick="showToolTab('que','add',this)">➕ Add Entry</button>
+        <button class="tool-tab" onclick="showToolTab('que','history',this)">📋 History</button>
+      </div>
+      <!-- Dashboard -->
+      <div id="que-tab-dashboard">
+        <div class="stats-grid-q" id="que-stats-grid"></div>
+        <div class="graphs-grid-q">
+          <div class="graph-card-q">
+            <div class="graph-title-q">📅 Weekly — Last 7 Days</div>
+            <canvas id="que-weekly-chart" height="180"></canvas>
+          </div>
+          <div class="graph-card-q">
+            <div class="graph-title-q">🗓️ Monthly — Last 4 Weeks</div>
+            <canvas id="que-monthly-chart" height="180"></canvas>
+          </div>
+          <div class="graph-card-q graph-full-q">
+            <div class="graph-title-q">🧪 Subject-wise Breakdown</div>
+            <div style="display:flex;align-items:center;gap:24px;flex-wrap:wrap;">
+              <div style="width:180px;height:180px;flex-shrink:0;"><canvas id="que-subject-chart"></canvas></div>
+              <div id="que-subject-legend" style="flex:1;min-width:160px;"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Add -->
+      <div id="que-tab-add" style="display:none;">
+        <div class="card">
+          <h3 style="margin-bottom:14px;font-size:1rem;">➕ Log Practice Session</h3>
+          <div class="form-grid">
+            <div class="form-group">
+              <label>Date</label>
+              <input type="date" id="q-datetime">
+            </div>
+            <div class="form-group">
+              <label>Subject</label>
+              <select id="q-subject">
+                <option value="Physics">⚡ Physics</option>
+                <option value="Chemistry">🧪 Chemistry</option>
+                <option value="Mathematics">📐 Mathematics</option>
+              </select>
+            </div>
+            <div class="form-group full">
+              <label>Source of Practice</label>
+              <div class="autocomplete-wrap">
+                <input type="text" id="q-source" placeholder="e.g. PYQ, HC Verma, NCERT..." autocomplete="off" oninput="handleSourceInput(this)">
+                <div class="autocomplete-list" id="q-autocomplete-list"></div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>No. of Questions</label>
+              <input type="number" id="q-questions" placeholder="e.g. 30" min="1">
+            </div>
+            <div class="form-group full">
+              <label>Notes (optional)</label>
+              <textarea id="q-notes" placeholder="Any notes..."></textarea>
+            </div>
+          </div>
+          <div class="form-actions">
+            <button class="btn btn-primary" onclick="saveQueEntry()">✅ Save Entry</button>
+          </div>
+        </div>
+      </div>
+      <!-- History -->
+      <div id="que-tab-history" style="display:none;">
+        <div id="que-history-empty" class="empty-state" style="display:none;">
+          <div class="icon">🗂️</div><p>No entries yet!</p>
+        </div>
+        <div class="card" id="que-history-table-wrap">
+          <div class="table-wrap">
+            <table>
+              <thead><tr>
+                <th>Date & Time</th><th>Subject</th><th>Source</th><th>Questions</th><th>Notes</th><th>Del</th>
+              </tr></thead>
+              <tbody id="que-history-tbody"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ====== SYLLABUS TOOL ====== -->
+  <div id="tool-syllabus" class="tool-panel">
+    <div class="tool-panel-header">
+      <button class="back-btn" onclick="closeTool()">← Back</button>
+      <div class="tool-panel-title">📚 Syllabus Checklist</div>
+      <button class="btn btn-ghost btn-sm" onclick="resetSyllabus()" style="margin-left:auto;">🔄 Reset</button>
+    </div>
+    <div class="tool-inner">
+      <div class="checklist-grid-s" id="syl-grid"></div>
+    </div>
+  </div>
+
+  <!-- ====== PERIODIC TABLE TOOL ====== -->
+  <div id="tool-periodic" class="tool-panel">
+    <div class="tool-panel-header">
+      <button class="back-btn" onclick="closeTool()">← Back</button>
+      <div class="tool-panel-title">⚗️ Periodic Table</div>
+    </div>
+    <div style="padding:16px 12px 80px; overflow-x:auto;">
+      <!-- Legend -->
+      <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-bottom:14px;">
+        <div style="display:flex;align-items:center;gap:5px;font-size:0.65rem;letter-spacing:1px;color:var(--text)"><div style="width:12px;height:12px;border-radius:3px;background:#ef233c"></div>Hydrogen</div>
+        <div style="display:flex;align-items:center;gap:5px;font-size:0.65rem;letter-spacing:1px;color:var(--text)"><div style="width:12px;height:12px;border-radius:3px;background:#ff4d6d"></div>Alkali Metal</div>
+        <div style="display:flex;align-items:center;gap:5px;font-size:0.65rem;letter-spacing:1px;color:var(--text)"><div style="width:12px;height:12px;border-radius:3px;background:#ff9f1c"></div>Alkaline Earth</div>
+        <div style="display:flex;align-items:center;gap:5px;font-size:0.65rem;letter-spacing:1px;color:var(--text)"><div style="width:12px;height:12px;border-radius:3px;background:#4cc9f0"></div>Transition Metal</div>
+        <div style="display:flex;align-items:center;gap:5px;font-size:0.65rem;letter-spacing:1px;color:var(--text)"><div style="width:12px;height:12px;border-radius:3px;background:#b67ee8"></div>Post-Transition</div>
+        <div style="display:flex;align-items:center;gap:5px;font-size:0.65rem;letter-spacing:1px;color:var(--text)"><div style="width:12px;height:12px;border-radius:3px;background:#06d6a0"></div>Metalloid</div>
+        <div style="display:flex;align-items:center;gap:5px;font-size:0.65rem;letter-spacing:1px;color:var(--text)"><div style="width:12px;height:12px;border-radius:3px;background:#ffbe0b"></div>Non-metal</div>
+        <div style="display:flex;align-items:center;gap:5px;font-size:0.65rem;letter-spacing:1px;color:var(--text)"><div style="width:12px;height:12px;border-radius:3px;background:#fb5607"></div>Halogen</div>
+        <div style="display:flex;align-items:center;gap:5px;font-size:0.65rem;letter-spacing:1px;color:var(--text)"><div style="width:12px;height:12px;border-radius:3px;background:#8338ec"></div>Noble Gas</div>
+        <div style="display:flex;align-items:center;gap:5px;font-size:0.65rem;letter-spacing:1px;color:var(--text)"><div style="width:12px;height:12px;border-radius:3px;background:#e07a5f"></div>Lanthanide</div>
+        <div style="display:flex;align-items:center;gap:5px;font-size:0.65rem;letter-spacing:1px;color:var(--text)"><div style="width:12px;height:12px;border-radius:3px;background:#f2cc8f"></div>Actinide</div>
+      </div>
+      <!-- Grid -->
+      <div style="overflow-x:auto;">
+        <div id="ptGrid" style="display:grid;grid-template-columns:repeat(18,46px);grid-template-rows:repeat(10,58px);gap:3px;margin:0 auto;width:fit-content;"></div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ═══ POMODORO TIMER PANEL ═══ -->
+  <!-- Periodic Table Element Overlay -->
+  <div id="pt-overlay" style="display:none;position:fixed;inset:0;z-index:500;align-items:center;justify-content:center;">
+    <div style="position:absolute;inset:0;background:rgba(10,10,15,0.88);backdrop-filter:blur(3px);" onclick="closePTOverlay()"></div>
+    <div id="pt-cfg-card" style="position:relative;z-index:10;background:var(--surface);border:1.5px solid var(--accent);border-radius:16px;padding:36px 44px;min-width:320px;max-width:500px;width:90vw;box-shadow:0 0 60px rgba(124,109,250,0.2);animation:fadeUp 0.2s ease;">
+      <button onclick="closePTOverlay()" style="position:absolute;top:14px;right:18px;background:none;border:none;color:var(--text2);font-size:1.4rem;cursor:pointer;">✕</button>
+      <div id="pt-sym" style="font-family:'Space Mono',monospace;font-size:4rem;font-weight:700;text-align:center;line-height:1;margin-bottom:4px;"></div>
+      <div id="pt-name" style="text-align:center;font-size:1.1rem;letter-spacing:4px;color:var(--text2);text-transform:uppercase;margin-bottom:20px;"></div>
+      <div style="display:flex;justify-content:space-around;margin-bottom:20px;font-size:0.78rem;color:var(--text2);">
+        <span>Atomic No.<br><b id="pt-z" style="display:block;color:var(--text);font-family:'Space Mono',monospace;font-size:1rem;font-weight:700;"></b></span>
+        <span>Atomic Mass<br><b id="pt-m" style="display:block;color:var(--text);font-family:'Space Mono',monospace;font-size:1rem;font-weight:700;"></b></span>
+        <span>Period<br><b id="pt-p" style="display:block;color:var(--text);font-family:'Space Mono',monospace;font-size:1rem;font-weight:700;"></b></span>
+        <span>Group<br><b id="pt-g" style="display:block;color:var(--text);font-family:'Space Mono',monospace;font-size:1rem;font-weight:700;"></b></span>
+      </div>
+      <div style="font-size:0.62rem;letter-spacing:3px;color:var(--accent);margin-bottom:8px;text-transform:uppercase;">Electronic Configuration</div>
+      <div id="pt-config" style="font-family:'Space Mono',monospace;font-size:1.05rem;line-height:1.8;text-align:center;color:var(--text);word-break:break-word;"></div>
+      <div id="pt-badge" style="display:inline-block;margin:16px auto 0;padding:3px 14px;border-radius:20px;font-size:0.65rem;letter-spacing:2px;text-transform:uppercase;font-weight:600;text-align:center;width:100%;"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== EDIT MODAL ===== -->
+<div class="edit-modal-overlay" id="editModalOverlay" onclick="if(event.target===this)closeEditModal()">
+  <div class="edit-modal">
+    <div class="edit-modal-title" id="editModalTitle">✏️ Edit</div>
+    <div id="editModalBody"></div>
+    <div class="edit-modal-actions">
+      <button class="btn btn-ghost" onclick="closeEditModal()">Cancel</button>
+      <button class="btn btn-primary" id="editModalSaveBtn">💾 Save</button>
+    </div>
+  </div>
+</div>
+
+<!-- ===== TOAST ===== -->
+<div id="toast">✅ Done!</div>
+
+<script>
+// ============================================================
+// ===== SHARED DATA KEYS =====
+// ============================================================
+const LS = {
+  todo: 'ds_jee_todo_v1',
+  reminderTests: 'ds_jee_remTests_v1',
+  mockTests: 'ds_jee_mockTests_v1',
+  queEntries: 'ds_jee_queEntries_v1',
+  queSources: 'ds_jee_queSources_v1',
+  syllabus: 'ds_jee_syllabus_v1',
+  theme: 'ds_jee_theme_v1',
+};
+
+// ============================================================
+// ===== THEME =====
+// ============================================================
+(function initTheme() {
+  const t = localStorage.getItem(LS.theme) || 'dark';
+  document.documentElement.setAttribute('data-theme', t);
+  document.querySelectorAll('.theme-option').forEach(o => o.classList.toggle('active', o.dataset.theme === t));
+})();
+
+document.getElementById('themeBtn').addEventListener('click', (e) => {
+  e.stopPropagation();
+  document.getElementById('themePicker').classList.toggle('open');
+});
+document.querySelectorAll('.theme-option').forEach(opt => {
+  opt.addEventListener('click', () => {
+    const n = opt.dataset.theme;
+    document.documentElement.setAttribute('data-theme', n);
+    localStorage.setItem(LS.theme, n);
+    document.querySelectorAll('.theme-option').forEach(o => o.classList.toggle('active', o.dataset.theme === n));
+    document.getElementById('themePicker').classList.remove('open');
+    refreshDashboard();
+  });
+});
+document.addEventListener('click', (e) => {
+  if (!document.getElementById('themePicker').contains(e.target))
+    document.getElementById('themePicker').classList.remove('open');
+});
+
+// ============================================================
+// ===== CLOCK =====
+// ============================================================
+setInterval(() => {
+  const now = new Date();
+  document.getElementById('liveClock').textContent = now.toTimeString().split(' ')[0];
+  // Midnight archive — jaise hi 12:00:00 baje, archive ho jaaye
+  if (now.getHours() === 0 && now.getMinutes() === 0 && now.getSeconds() === 0) archiveTodoTasks();
+  // Error log date default
+  const elDateEl = document.getElementById('el-date');
+  if (elDateEl) elDateEl.value = localDateStr ? localDateStr() : new Date().toISOString().split('T')[0];
+}, 1000);
+
+// ============================================================
+// ===== MAIN NAVIGATION =====
+// ============================================================
+function showMainScreen(id, btn) {
+  document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+  document.querySelectorAll('.main-nav-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById('screen-' + id).classList.add('active');
+  btn.classList.add('active');
+  if (id === 'dashboard') refreshDashboard();
+}
+
+// ============================================================
+// ===== TOOLS NAVIGATION =====
+// ============================================================
+let currentTool = null;
+
+function openTool(toolId) {
+  document.getElementById('tools-home').style.display = 'none';
+  document.querySelectorAll('.tool-panel').forEach(p => p.classList.remove('active'));
+  document.getElementById('tool-' + toolId).classList.add('active');
+  currentTool = toolId;
+  // init tool
+  if (toolId === 'todo') { renderTodoTasks(); }
+  if (toolId === 'reminder') { buildReminderSyllabusUI(); renderReminderCards(); }
+  if (toolId === 'mock') { renderMockDashboard(); renderMockHistory(); }
+  if (toolId === 'que') { renderQueDashboard(); initQueForm(); }
+  if (toolId === 'syllabus') { renderSyllabus(); }
+  if (toolId === 'periodic') { initPeriodicTable(); }
+}
+
+function closeTool() {
+  document.querySelectorAll('.tool-panel').forEach(p => p.classList.remove('active'));
+  document.getElementById('tools-home').style.display = 'block';
+  currentTool = null;
+}
+
+function showToolTab(tool, tab, btn) {
+  // Hide all tabs for this tool
+  document.querySelectorAll(`#tool-${tool} [id^="${tool}-tab-"]`).forEach(el => el.style.display = 'none');
+  document.getElementById(`${tool}-tab-${tab}`).style.display = 'block';
+  // Update tab buttons
+  document.querySelectorAll(`#tool-${tool} .tool-tab`).forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  // refresh
+  if (tool === 'todo' && tab === 'list') renderTodoTasks();
+  if (tool === 'todo' && tab === 'history') renderTodoHistory();
+  if (tool === 'reminder' && tab === 'upcoming') renderReminderCards();
+  if (tool === 'reminder' && tab === 'history') renderReminderHistory();
+  if (tool === 'mock' && tab === 'dashboard') renderMockDashboard();
+  if (tool === 'mock' && tab === 'history') renderMockHistory();
+  if (tool === 'que' && tab === 'dashboard') renderQueDashboard();
+  if (tool === 'que' && tab === 'history') renderQueHistory();
+  if (tool === 'que' && tab === 'add') initQueForm();
+}
+
+// ============================================================
+// ===== TOAST =====
+// ============================================================
+function showToast(msg) {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 2600);
+}
+
+// ============================================================
+// ===== EDIT MODAL =====
+// ============================================================
+function openEditModal(title, bodyHTML, onSave) {
+  document.getElementById('editModalTitle').textContent = title;
+  document.getElementById('editModalBody').innerHTML = bodyHTML;
+  document.getElementById('editModalSaveBtn').onclick = onSave;
+  document.getElementById('editModalOverlay').classList.add('open');
+}
+function closeEditModal() {
+  document.getElementById('editModalOverlay').classList.remove('open');
+}
+
+// ===== EDIT TODO =====
+function editTodoTask(id) {
+  const db = getTodoDb();
+  const t = db.tasks.find(x => x.id === id);
+  if (!t) return;
+  const body = `
+    <div class="form-group" style="margin-bottom:12px;">
+      <label>Subject</label>
+      <select id="em-sub">
+        <option ${t.sub==='Physics'?'selected':''}>Physics</option>
+        <option ${t.sub==='Chemistry'?'selected':''}>Chemistry</option>
+        <option ${t.sub==='Maths'?'selected':''}>Maths</option>
+      </select>
+    </div>
+    <div class="form-group" style="margin-bottom:12px;">
+      <label>Task</label>
+      <input type="text" id="em-task" value="${t.task.replace(/"/g,'&quot;')}">
+    </div>
+    <div class="form-group">
+      <label>Date</label>
+      <input type="date" id="em-date" value="${t.date}">
+    </div>`;
+  openEditModal('✏️ Edit Target', body, () => {
+    const newTask = document.getElementById('em-task').value.trim();
+    const newSub = document.getElementById('em-sub').value;
+    const newDate = document.getElementById('em-date').value;
+    if (!newTask) { showToast('⚠️ Task khali nahi ho sakta!'); return; }
+    const db2 = getTodoDb();
+    const t2 = db2.tasks.find(x => x.id === id);
+    if (t2) { t2.task = newTask; t2.sub = newSub; t2.date = newDate; }
+    saveTodoDb(db2); closeEditModal(); renderTodoTasks(); showToast('✅ Target updated!');
+  });
+}
+
+// ===== EDIT REMINDER TEST =====
+function editReminderTest(id) {
+  const tests = reminderTests();
+  const t = tests.find(x => x.id == id);
+  if (!t) return;
+  reminderSelectedChapters = t.chapters ? [...t.chapters] : [];
+
+  let sylHTML = '<div style="margin-bottom:8px;font-size:0.8rem;font-weight:600;color:var(--text2);margin-top:4px;">📚 Syllabus Chapters</div>';
+  sylHTML += '<div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-bottom:8px;">';
+  Object.entries(REMINDER_SYLLABUS).forEach(([subject, data]) => {
+    let unitsHTML = '';
+    Object.entries(data.units).forEach(([unit, chapters]) => {
+      const chapHTML = chapters.map(ch => {
+        const checked = reminderSelectedChapters.some(x => x.ch === ch) ? 'checked' : '';
+        return `<label class="chapter-item-r"><input type="checkbox" value="${ch}" ${checked} onchange="rToggleChapter('${ch}','${subject}');renderEditReminderChips()"> ${ch}</label>`;
+      }).join('');
+      unitsHTML += `<div><div class="unit-header-r" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open')"><span>${unit}</span><span class="uchev">▼</span></div><div class="chapters-list-r">${chapHTML}</div></div>`;
+    });
+    sylHTML += `<div class="subject-block-r"><div class="subject-header-r ${data.color}" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open')"><span>${data.icon} ${subject}</span><span class="chevron">▼</span></div><div class="units-list-r">${unitsHTML}</div></div>`;
+  });
+  sylHTML += '</div>';
+  sylHTML += `<div class="selected-chips" id="em-rChips"></div>`;
+
+  const body = `
+    <div class="form-group" style="margin-bottom:12px;">
+      <label>Test Name</label>
+      <input type="text" id="em-rname" value="${t.name.replace(/"/g,'&quot;')}">
+    </div>
+    <div class="form-group" style="margin-bottom:12px;">
+      <label>Date & Time</label>
+      <input type="datetime-local" id="em-rdate" value="${t.date}">
+    </div>
+    <div class="form-group" style="margin-bottom:12px;">
+      <label>Note</label>
+      <textarea id="em-rnote">${t.note||''}</textarea>
+    </div>
+    <div class="form-group">${sylHTML}</div>`;
+
+  openEditModal('✏️ Edit Test Reminder', body, () => {
+    const name = document.getElementById('em-rname').value.trim();
+    const date = document.getElementById('em-rdate').value;
+    const note = document.getElementById('em-rnote').value.trim();
+    if (!name || !date) { showToast('⚠️ Name aur date zaruri hai!'); return; }
+    const arr = reminderTests();
+    const idx = arr.findIndex(x => x.id == id);
+    if (idx !== -1) {
+      arr[idx].name = name; arr[idx].date = date;
+      arr[idx].note = note; arr[idx].chapters = [...reminderSelectedChapters];
+    }
+    saveReminderTests(arr);
+    const db = getTodoDb();
+    const todoTask = db.tasks.find(tk => String(tk.id) === ('test_' + id));
+    if (todoTask) { todoTask.task = '📋 Test: ' + name; todoTask.date = date.split('T')[0]; }
+    saveTodoDb(db);
+    closeEditModal(); renderReminderCards(); showToast('✅ Test + Syllabus updated!');
+  });
+  setTimeout(renderEditReminderChips, 60);
+}
+
+function renderEditReminderChips() {
+  const el = document.getElementById('em-rChips');
+  if (!el) return;
+  if (!reminderSelectedChapters.length) {
+    el.innerHTML = '<span style="font-size:0.78rem;color:var(--text2)">No chapters selected</span>';
+    return;
+  }
+  el.innerHTML = reminderSelectedChapters.map(({ch}) =>
+    `<span class="chip">${ch} <span class="chip-x" onclick="rRemoveChip('${ch}');renderEditReminderChips()">✕</span></span>`
+  ).join('');
+}
+
+
+// ===== EDIT MOCK TEST =====
+function editMockTest(id) {
+  const tests = getMockTests();
+  const t = tests.find(x => x.id === id);
+  if (!t) return;
+  const body = `
+    <div class="form-group" style="margin-bottom:12px;">
+      <label>Test Name</label>
+      <input type="text" id="em-mname" value="${t.name.replace(/"/g,'&quot;')}">
+    </div>
+    <div class="form-group" style="margin-bottom:12px;">
+      <label>Date</label>
+      <input type="date" id="em-mdate" value="${t.date}">
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-bottom:12px;">
+      <div class="form-group"><label style="color:var(--phy);">Physics Score</label><input type="number" id="em-phy" value="${t.phy.score}"></div>
+      <div class="form-group"><label style="color:var(--chem);">Chem Score</label><input type="number" id="em-chem" value="${t.chem.score}"></div>
+      <div class="form-group"><label style="color:var(--math);">Math Score</label><input type="number" id="em-math" value="${t.math.score}"></div>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;">
+      <div class="form-group"><label>Phy Total</label><input type="number" id="em-phyt" value="${t.phy.total}"></div>
+      <div class="form-group"><label>Chem Total</label><input type="number" id="em-chemt" value="${t.chem.total}"></div>
+      <div class="form-group"><label>Math Total</label><input type="number" id="em-matht" value="${t.math.total}"></div>
+    </div>`;
+  openEditModal('✏️ Edit Mock Test', body, () => {
+    const name = document.getElementById('em-mname').value.trim();
+    const date = document.getElementById('em-mdate').value;
+    const phyS = parseFloat(document.getElementById('em-phy').value);
+    const chemS = parseFloat(document.getElementById('em-chem').value);
+    const mathS = parseFloat(document.getElementById('em-math').value);
+    const phyT = parseFloat(document.getElementById('em-phyt').value) || 120;
+    const chemT = parseFloat(document.getElementById('em-chemt').value) || 120;
+    const mathT = parseFloat(document.getElementById('em-matht').value) || 120;
+    if (!name || !date || isNaN(phyS) || isNaN(chemS) || isNaN(mathS)) { showToast('⚠️ Saare fields bharo!'); return; }
+    const total = phyS + chemS + mathS;
+    const maxTotal = phyT + chemT + mathT;
+    const arr = getMockTests();
+    const idx = arr.findIndex(x => x.id === id);
+    if (idx !== -1) { arr[idx] = { ...arr[idx], name, date, phy:{score:phyS,total:phyT}, chem:{score:chemS,total:chemT}, math:{score:mathS,total:mathT}, total, maxTotal, pct:parseFloat(((total/maxTotal)*100).toFixed(1)) }; }
+    arr.sort((a,b) => new Date(a.date)-new Date(b.date));
+    saveMockTests(arr); closeEditModal(); renderMockHistory(); renderMockDashboard(); refreshDashboard(); showToast('✅ Mock test updated!');
+  });
+}
+
+// ===== EDIT QUE ENTRY =====
+function editQueEntry(id) {
+  const data = getQueData();
+  const e = data.find(x => x.id === id);
+  if (!e) return;
+  const body = `
+    <div class="form-group" style="margin-bottom:12px;">
+      <label>Date</label>
+      <input type="date" id="em-qdt" value="${e.dt.slice(0,10)}">
+    </div>
+    <div class="form-group" style="margin-bottom:12px;">
+      <label>Subject</label>
+      <select id="em-qsub">
+        <option ${e.subject==='Physics'?'selected':''} value="Physics">⚡ Physics</option>
+        <option ${e.subject==='Chemistry'?'selected':''} value="Chemistry">🧪 Chemistry</option>
+        <option ${e.subject==='Mathematics'?'selected':''} value="Mathematics">📐 Mathematics</option>
+      </select>
+    </div>
+    <div class="form-group" style="margin-bottom:12px;">
+      <label>Source</label>
+      <input type="text" id="em-qsrc" value="${e.source.replace(/"/g,'&quot;')}">
+    </div>
+    <div class="form-group" style="margin-bottom:12px;">
+      <label>Questions</label>
+      <input type="number" id="em-qqs" value="${e.questions}" min="1">
+    </div>
+    <div class="form-group">
+      <label>Notes</label>
+      <textarea id="em-qnotes">${e.notes||''}</textarea>
+    </div>`;
+  openEditModal('✏️ Edit Question Entry', body, () => {
+    const dt = document.getElementById('em-qdt').value;
+    const subject = document.getElementById('em-qsub').value;
+    const source = document.getElementById('em-qsrc').value.trim();
+    const questions = parseInt(document.getElementById('em-qqs').value);
+    const notes = document.getElementById('em-qnotes').value.trim();
+    if (!dt || !source || !questions || questions < 1) { showToast('⚠️ Saare fields sahi bharo!'); return; }
+    const arr = getQueData();
+    const idx = arr.findIndex(x => x.id === id);
+    if (idx !== -1) { arr[idx] = { ...arr[idx], dt, subject, source, questions, notes }; }
+    saveQueData(arr); closeEditModal(); renderQueHistory(); renderQueDashboard(); refreshDashboard(); showToast('✅ Entry updated!');
+  });
+}
+
+// ============================================================
+// ===== TODO TOOL =====
+// ============================================================
+function getTodoDb() { return JSON.parse(localStorage.getItem(LS.todo) || '{"tasks":[],"history":{}}'); }
+function saveTodoDb(db) { localStorage.setItem(LS.todo, JSON.stringify(db)); }
+
+function addTodoTask() {
+  const task = document.getElementById('todo-task').value.trim();
+  const sub = document.getElementById('todo-subject').value;
+  const date = document.getElementById('todo-date').value || localDateStr();
+  if (!task) { showToast('⚠️ Task likhna bhool gaye!'); return; }
+  const db = getTodoDb();
+  db.tasks.push({ id: Date.now(), task, sub, date, done: false });
+  saveTodoDb(db);
+  document.getElementById('todo-task').value = '';
+  showToast('✅ Target added!');
+}
+
+document.getElementById('todo-date').value = localDateStr();
+
+function renderTodoTasks() {
+  const db = getTodoDb();
+  const today = localDateStr();
+  const curDiv = document.getElementById('todo-current-list');
+  const futDiv = document.getElementById('todo-future-list');
+  curDiv.innerHTML = ''; futDiv.innerHTML = '';
+
+  if (!db.tasks.length) {
+    curDiv.innerHTML = '<div class="empty-state"><div class="icon">📝</div><p>Koi target nahi abhi!</p></div>';
+    return;
+  }
+
+  db.tasks.forEach(t => {
+    const idStr = typeof t.id === 'string' ? `'${t.id}'` : t.id;
+    // For reminder tasks, extract the original reminder id
+    const reminderIdStr = t.fromReminder ? String(t.id).replace('test_', '') : null;
+    const editBtn = t.fromReminder
+      ? `<button class="btn btn-ghost btn-sm" onclick="event.stopPropagation();editReminderTest(${reminderIdStr})" style="padding:5px 10px;" title="Test Reminder mein edit hoga">✏️</button>`
+      : `<button class="btn btn-ghost btn-sm" onclick="event.stopPropagation();editTodoTask(${idStr})" style="padding:5px 10px;">✏️</button>`;
+    const html = `<div class="target-card ${t.done ? 'done' : ''}" onclick="toggleTodoTask(${idStr})">
+      <div class="tc-left">
+        <div class="tc-sub ${t.sub}">${t.fromReminder ? '⏰' : ''} ${t.sub}</div>
+        <div class="tc-task">${t.task}</div>
+        <div class="tc-date">${t.date}${t.fromReminder ? ' · From Reminder' : ''}</div>
+      </div>
+      <div class="tc-right">
+        ${t.done ? '<span style="color:var(--green);font-size:1.2rem;">✓</span>' : '<span style="color:var(--text3);font-size:1.2rem;">○</span>'}
+        ${editBtn}
+        <button class="btn btn-danger btn-sm" onclick="event.stopPropagation();deleteTodoTask(${idStr})">🗑️</button>
+      </div>
+    </div>`;
+    if (t.date <= today) curDiv.innerHTML += html;
+    else futDiv.innerHTML += html;
+  });
+
+  if (!curDiv.innerHTML) curDiv.innerHTML = '<div class="empty-state" style="padding:20px;"><p>Aaj koi target nahi!</p></div>';
+  if (!futDiv.innerHTML) futDiv.innerHTML = '<div class="empty-state" style="padding:20px;"><p>Koi upcoming target nahi</p></div>';
+}
+
+function toggleTodoTask(id) {
+  const db = getTodoDb();
+  const t = db.tasks.find(x => x.id == id);
+  if (t) t.done = !t.done;
+  saveTodoDb(db); renderTodoTasks(); refreshDashboard();
+}
+
+function deleteTodoTask(id) {
+  const db = getTodoDb();
+  db.tasks = db.tasks.filter(x => x.id != id);
+  saveTodoDb(db); renderTodoTasks();
+}
+
+// ===== LOCAL DATE HELPER — India timezone safe =====
+function localDateStr(d) {
+  const dt = d || new Date();
+  const yr = dt.getFullYear();
+  const mo = String(dt.getMonth() + 1).padStart(2, '0');
+  const da = String(dt.getDate()).padStart(2, '0');
+  return `${yr}-${mo}-${da}`;
+}
+
+function archiveTodoTasks() {
+  const db = getTodoDb();
+  const today = localDateStr();
+  // Archive ALL tasks strictly BEFORE today
+  const toArchive = db.tasks.filter(t => t.date < today);
+  if (toArchive.length) {
+    const byDate = {};
+    toArchive.forEach(t => {
+      if (!byDate[t.date]) byDate[t.date] = [];
+      byDate[t.date].push(t);
+    });
+    Object.entries(byDate).forEach(([dateStr, tasks]) => {
+      const d = new Date(dateStr + 'T12:00:00'); // noon to avoid timezone shift
+      const month = d.toLocaleString('default', { month: 'long', year: 'numeric' });
+      if (!db.history[month]) db.history[month] = {};
+      if (!db.history[month][dateStr]) db.history[month][dateStr] = [];
+      db.history[month][dateStr].push(...tasks);
+    });
+    db.tasks = db.tasks.filter(t => t.date >= today); // past fromReminder tasks bhi remove
+    saveTodoDb(db);
+  }
+}
+
+function renderTodoHistory() {
+  const db = getTodoDb();
+  const cont = document.getElementById('todo-history-content');
+  cont.innerHTML = '<div class="section-label">📂 Archive</div>';
+  if (!Object.keys(db.history).length) {
+    cont.innerHTML += '<div class="empty-state"><div class="icon">📂</div><p>Koi history nahi abhi</p></div>';
+    return;
+  }
+  for (let m in db.history) {
+    let daysHTML = '';
+    for (let d in db.history[m]) {
+      const tasks = db.history[m][d];
+      const taskCards = tasks.map((t, tIdx) => {
+        return `<div class="target-card ${t.done ? 'done' : ''}" style="margin-bottom:6px;cursor:default;">
+          <div class="tc-left">
+            <div class="tc-sub ${t.sub}">${t.sub}</div>
+            <div class="tc-task">${t.task}</div>
+            <div class="tc-date">${t.done ? '✅ Completed' : '❌ Not done'}</div>
+          </div>
+          <div class="tc-right">
+            <button class="btn btn-sm" onclick="toggleHistoryTask('${m}','${d}',${tIdx})" 
+              style="padding:5px 10px;background:${t.done ? 'rgba(34,197,94,0.15)' : 'rgba(255,255,255,0.05)'};border:1px solid ${t.done ? 'var(--green)' : 'var(--border)'};color:${t.done ? 'var(--green)' : 'var(--text3)'};"
+              title="${t.done ? 'Mark undone' : 'Mark done'}">${t.done ? '✓' : '○'}</button>
+            <button class="btn btn-ghost btn-sm" onclick="editHistoryTask('${m}','${d}',${tIdx})" style="padding:5px 8px;">✏️</button>
+            <button class="btn btn-danger btn-sm" onclick="deleteHistoryTask('${m}','${d}',${tIdx})">🗑️</button>
+          </div>
+        </div>`;
+      }).join('');
+      daysHTML += `<div style="margin-bottom:6px;">
+        <div class="folder-header" style="font-size:0.8rem;font-weight:700;padding:8px 12px;border-radius:8px;cursor:pointer;" onclick="this.nextElementSibling.classList.toggle('open')">
+          <span>📅 ${d} — ${tasks.length} task${tasks.length>1?'s':''}</span><span>▼</span>
+        </div>
+        <div class="folder-body" style="padding:8px 4px 4px 4px;">${taskCards}</div>
+      </div>`;
+    }
+    cont.innerHTML += `<div class="folder">
+      <div class="folder-header" onclick="this.nextElementSibling.classList.toggle('open')">
+        <span>📁 ${m}</span><span>▼</span>
+      </div>
+      <div class="folder-body">${daysHTML}</div>
+    </div>`;
+  }
+}
+
+function toggleHistoryTask(month, dateStr, idx) {
+  const db = getTodoDb();
+  if (!db.history[month]?.[dateStr]?.[idx]) return;
+  db.history[month][dateStr][idx].done = !db.history[month][dateStr][idx].done;
+  saveTodoDb(db); renderTodoHistory(); showToast('✅ Status updated!');
+}
+
+function editHistoryTask(month, dateStr, idx) {
+  const db = getTodoDb();
+  const t = db.history[month]?.[dateStr]?.[idx];
+  if (!t) return;
+  const body = `
+    <div class="form-group" style="margin-bottom:12px;">
+      <label>Subject</label>
+      <select id="em-hsub">
+        <option ${t.sub==='Physics'?'selected':''}>Physics</option>
+        <option ${t.sub==='Chemistry'?'selected':''}>Chemistry</option>
+        <option ${t.sub==='Maths'?'selected':''}>Maths</option>
+      </select>
+    </div>
+    <div class="form-group" style="margin-bottom:12px;">
+      <label>Task</label>
+      <input type="text" id="em-htask" value="${t.task.replace(/"/g,'&quot;')}">
+    </div>
+    <div class="form-group">
+      <label>Status</label>
+      <select id="em-hdone">
+        <option value="false" ${!t.done?'selected':''}>❌ Not Done</option>
+        <option value="true" ${t.done?'selected':''}>✅ Done</option>
+      </select>
+    </div>`;
+  openEditModal('✏️ Edit Archived Task', body, () => {
+    const db2 = getTodoDb();
+    if (!db2.history[month]?.[dateStr]?.[idx]) return;
+    db2.history[month][dateStr][idx].sub = document.getElementById('em-hsub').value;
+    db2.history[month][dateStr][idx].task = document.getElementById('em-htask').value.trim();
+    db2.history[month][dateStr][idx].done = document.getElementById('em-hdone').value === 'true';
+    saveTodoDb(db2); closeEditModal(); renderTodoHistory(); showToast('✅ Task updated!');
+  });
+}
+
+function deleteHistoryTask(month, dateStr, idx) {
+  const db = getTodoDb();
+  if (!db.history[month]?.[dateStr]) return;
+  db.history[month][dateStr].splice(idx, 1);
+  if (!db.history[month][dateStr].length) delete db.history[month][dateStr];
+  if (!Object.keys(db.history[month]).length) delete db.history[month];
+  saveTodoDb(db); renderTodoHistory(); showToast('🗑️ Task deleted!');
+}
+
+// ====== AUTO-SYNC REMINDER TESTS TO TODO ======
+function syncReminderTestsToTodo() {
+  const allTests = JSON.parse(localStorage.getItem(LS.reminderTests) || '[]');
+  const today = localDateStr();
+  const db = getTodoDb();
+  // Only sync FUTURE or TODAY tests
+  const futureTests = allTests.filter(t => t.date && t.date.split('T')[0] >= today);
+  const futureIds = futureTests.map(t => 'test_' + t.id);
+  // Remove ALL fromReminder todo tasks that are NOT in future tests
+  // (past reminder tasks should stay archived, not in active tasks)
+  db.tasks = db.tasks.filter(t => {
+    if (t.fromReminder) return futureIds.includes(String(t.id));
+    return true;
+  });
+  // Add missing future/today reminder tasks
+  futureTests.forEach(t => {
+    const dateStr = t.date.split('T')[0];
+    const alreadyExists = db.tasks.some(tk => String(tk.id) === ('test_' + t.id));
+    if (!alreadyExists) {
+      db.tasks.push({
+        id: 'test_' + t.id,
+        task: '📋 Test: ' + t.name,
+        sub: 'Physics',
+        date: dateStr,
+        done: false,
+        fromReminder: true
+      });
+    }
+  });
+  saveTodoDb(db);
+}
+
+// ============================================================
+// ===== TEST REMINDER TOOL =====
+// ============================================================
+const REMINDER_SYLLABUS = {
+  Physics: { icon:'⚡', color:'phy', units: {
+    'Mechanics-1':['Mathematical Tools','Unit and Dimension','Motion in Straight Line','Motion in Plane','NLM','Circular Motion','Work Power and Energy','COM','Rotation'],
+    'Mechanics-2':['SHM','KTG and Thermodynamics','Mechanical Properties of Solid','Thermal Properties of Matter','Mechanical Properties of Fluids','Waves','Gravitation','Error and Measurements'],
+    'Electromagnetism':['Electric Charges and Field','Electric Potential','Capacitance','Current Electricity','Magnetism','EMI','EM Waves','AC'],
+    'Optics':['Ray Optics','Wave Optics'],
+    'Modern':['Modern Physics','Semiconductor']
+  }},
+  Chemistry: { icon:'🧪', color:'che', units: {
+    'Physical':['Mole Concept','Redox Reaction','Solution','Chemical Kinetics','Thermodynamic','Chemical Equilibrium','Ionic Equilibrium','Structure of Matter','Electrochemistry','The Solid State','Status of Matter','Surface Chemistry'],
+    'Inorganic':['Periodic Table','Chemical Bonding','Coordinate Compound','P Block Element','d and f Block Element','Salt Analysis','Metallurgy','S Block','Hydrogen'],
+    'Organic':['IUPAC','GOC','Isomers','Hydrocarbon','Haloalkane and Haloarene','Alcohols Phenols And Ethers','Aldehydes Ketones And Carboxylic Acids','Amines','Biomolecules','Polymers','Chemistry in Everyday Life','Environmental Chemistry']
+  }},
+  Mathematics: { icon:'📐', color:'mat', units: {
+    'Algebra':['Basic Math','Quadratic Equation','Sequence and Series','Complex Number-1','Complex Number-2','Permutation and Combination','Binomial Theorem','Probability','Statistics'],
+    'Coordinate Geometry':['Straight Line','Circle','Parabola','Ellipse','Hyperbola'],
+    'Trigo':['Trigonometry Function','Trigonometry Equation','Inverse Trigonometry Function','SOT'],
+    'Vector':['Vector Algebra','3-D Geometry'],
+    'Calculus':['Sets','Relation and Function','LCD','MOD','AOD','Indefinite Integration','Definite Integration','AOI','Differential Equation']
+  }}
+};
+
+let reminderSelectedChapters = [];
+let reminderTests = () => JSON.parse(localStorage.getItem(LS.reminderTests) || '[]');
+function saveReminderTests(arr) { localStorage.setItem(LS.reminderTests, JSON.stringify(arr)); }
+let reminderCountdowns = {};
+
+function buildReminderSyllabusUI() {
+  const wrap = document.getElementById('r-syllabusWrapper');
+  wrap.innerHTML = '';
+  Object.entries(REMINDER_SYLLABUS).forEach(([subject, data]) => {
+    let unitsHTML = '';
+    Object.entries(data.units).forEach(([unit, chapters]) => {
+      const chapHTML = chapters.map(ch => `<label class="chapter-item-r">
+        <input type="checkbox" value="${ch}" onchange="rToggleChapter('${ch}','${subject}')"> ${ch}
+      </label>`).join('');
+      unitsHTML += `<div>
+        <div class="unit-header-r" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open')">
+          <span>${unit}</span><span class="uchev">▼</span>
+        </div>
+        <div class="chapters-list-r">${chapHTML}</div>
+      </div>`;
+    });
+    wrap.innerHTML += `<div class="subject-block-r">
+      <div class="subject-header-r ${data.color}" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open')">
+        <span>${data.icon} ${subject}</span><span class="chevron">▼</span>
+      </div>
+      <div class="units-list-r">${unitsHTML}</div>
+    </div>`;
+  });
+}
+
+function rToggleChapter(ch, subject) {
+  const idx = reminderSelectedChapters.findIndex(x => x.ch === ch);
+  if (idx === -1) reminderSelectedChapters.push({ch, subject});
+  else reminderSelectedChapters.splice(idx, 1);
+  renderReminderChips();
+}
+
+function renderReminderChips() {
+  const el = document.getElementById('r-selectedChips');
+  if (!reminderSelectedChapters.length) {
+    el.innerHTML = '<span style="font-size:0.78rem;color:var(--text2)">No chapters selected</span>';
+    return;
+  }
+  el.innerHTML = reminderSelectedChapters.map(({ch}) =>
+    `<span class="chip">${ch} <span class="chip-x" onclick="rRemoveChip('${ch}')">✕</span></span>`
+  ).join('');
+}
+
+function rRemoveChip(ch) {
+  reminderSelectedChapters = reminderSelectedChapters.filter(x => x.ch !== ch);
+  // Uncheck in both add form AND edit modal
+  document.querySelectorAll(`input[type=checkbox][value="${ch}"]`).forEach(cb => cb.checked = false);
+  renderReminderChips();
+  renderEditReminderChips();
+}
+
+function clearReminderForm() {
+  document.getElementById('r-testName').value = '';
+  document.getElementById('r-testDate').value = '';
+  document.getElementById('r-testNote').value = '';
+  reminderSelectedChapters = [];
+  document.querySelectorAll('#r-syllabusWrapper input[type=checkbox]').forEach(cb => cb.checked = false);
+  renderReminderChips();
+}
+
+function addReminderTest() {
+  const name = document.getElementById('r-testName').value.trim();
+  const date = document.getElementById('r-testDate').value;
+  const note = document.getElementById('r-testNote').value.trim();
+  if (!name || !date) { showToast('⚠️ Name aur date bharo!'); return; }
+  const tests = reminderTests();
+  const test = { id: Date.now(), name, date, note, chapters: [...reminderSelectedChapters], addedAt: new Date().toISOString() };
+  tests.push(test);
+  saveReminderTests(tests);
+  syncReminderTestsToTodo();
+  clearReminderForm();
+  showToast('✅ Test added!');
+  document.querySelector('#tool-reminder .tool-tab').click();
+}
+
+function deleteReminderTest(id) {
+  const numId = Number(id);
+  const tests = reminderTests().filter(t => Number(t.id) !== numId);
+  saveReminderTests(tests);
+  // Also remove from Todo — robust string match
+  const db = getTodoDb();
+  db.tasks = db.tasks.filter(t => {
+    const tIdStr = String(t.id);
+    return tIdStr !== ('test_' + numId) && tIdStr !== ('test_' + id);
+  });
+  saveTodoDb(db);
+  renderReminderCards();
+  // Re-render todo list if visible
+  if (document.getElementById('todo-current-list')) renderTodoTasks();
+  showToast('🗑️ Reminder aur Todo dono se delete ho gaya!');
+}
+
+function getTestStatus(dateStr) {
+  const diff = new Date(dateStr) - new Date();
+  const days = diff / (1000 * 60 * 60 * 24);
+  if (diff < 0) return 'past';
+  if (days <= 3) return 'red';
+  if (days <= 7) return 'yellow';
+  return 'green';
+}
+
+function renderReminderCards() {
+  Object.values(reminderCountdowns).forEach(clearInterval);
+  reminderCountdowns = {};
+  const container = document.getElementById('reminder-cards-container');
+  const upcoming = reminderTests().filter(t => new Date(t.date) > new Date());
+  if (!upcoming.length) {
+    container.innerHTML = '<div class="empty-state"><div class="icon">📭</div><p>Koi upcoming test nahi.<br>Add Test tab mein add karo!</p></div>';
+    return;
+  }
+  upcoming.sort((a, b) => new Date(a.date) - new Date(b.date));
+  container.innerHTML = upcoming.map(t => {
+    const status = getTestStatus(t.date);
+    const badgeClass = 'badge-' + status;
+    const statusLabel = { green: '✅ Plenty of Time', yellow: '⚡ Getting Close', red: '🔥 Urgent!' }[status];
+    const chips = t.chapters.slice(0, 5).map(c => `<span class="card-chip">${c.ch}</span>`).join('') +
+      (t.chapters.length > 5 ? `<span class="card-chip">+${t.chapters.length - 5} more</span>` : '');
+    return `<div class="test-card ${status}">
+      <div class="card-top">
+        <div>
+          <div class="card-name">${t.name}</div>
+          <div class="card-date">📅 ${new Date(t.date).toLocaleString('en-IN',{day:'numeric',month:'short',year:'numeric',hour:'2-digit',minute:'2-digit'})}</div>
+        </div>
+        <span class="card-badge ${badgeClass}">${statusLabel}</span>
+      </div>
+      <div class="countdown" id="rcd-${t.id}"></div>
+      ${chips ? `<div class="card-chips">${chips}</div>` : ''}
+      ${t.note ? `<div class="card-note">💬 ${t.note}</div>` : ''}
+      <div class="card-actions">
+        <button class="btn btn-ghost btn-sm" onclick="editReminderTest(${t.id})" style="padding:6px 14px;">✏️ Edit</button>
+        <button class="btn btn-danger btn-sm" onclick="deleteReminderTest(${t.id})">🗑️ Delete</button>
+      </div>
+    </div>`;
+  }).join('');
+  upcoming.forEach(t => {
+    renderReminderCountdown(t.id, t.date);
+    reminderCountdowns[t.id] = setInterval(() => renderReminderCountdown(t.id, t.date), 30000);
+  });
+}
+
+function renderReminderCountdown(id, dateStr) {
+  const el = document.getElementById('rcd-' + id);
+  if (!el) return;
+  const diff = new Date(dateStr) - new Date();
+  if (diff <= 0) { el.innerHTML = '<span style="color:var(--red)">Test time passed!</span>'; return; }
+  const days = Math.floor(diff / 86400000);
+  const hrs = Math.floor((diff % 86400000) / 3600000);
+  const min = Math.floor((diff % 3600000) / 60000);
+  el.innerHTML = `<div class="cd-unit"><span class="cd-num">${String(days).padStart(2,'0')}</span><span class="cd-label">days</span></div>
+    <span class="cd-sep">:</span>
+    <div class="cd-unit"><span class="cd-num">${String(hrs).padStart(2,'0')}</span><span class="cd-label">hrs</span></div>
+    <span class="cd-sep">:</span>
+    <div class="cd-unit"><span class="cd-num">${String(min).padStart(2,'0')}</span><span class="cd-label">min</span></div>`;
+}
+
+function renderReminderHistory() {
+  const container = document.getElementById('reminder-history-container');
+  const past = reminderTests().filter(t => new Date(t.date) <= new Date()).sort((a,b) => new Date(b.date)-new Date(a.date));
+  if (!past.length) {
+    container.innerHTML = '<div class="empty-state"><div class="icon">📂</div><p>Koi past test nahi.</p></div>';
+    return;
+  }
+  container.innerHTML = past.map(t => `<div class="folder">
+    <div class="folder-header" onclick="this.nextElementSibling.classList.toggle('open')">
+      <div><div style="font-weight:600;">${t.name}</div><div style="font-size:0.75rem;color:var(--text2);">${new Date(t.date).toLocaleDateString('en-IN')}</div></div>
+      <span>▼</span>
+    </div>
+    <div class="folder-body">
+      ${t.note ? `<div style="margin-bottom:8px;font-size:0.82rem;color:var(--text2);font-style:italic;">💬 ${t.note}</div>` : ''}
+      <div style="font-size:0.78rem;color:var(--text3);margin-bottom:10px;">Chapters: ${t.chapters.map(c=>c.ch).join(', ')||'None recorded'}</div>
+      <div style="display:flex;gap:8px;">
+        <button class="btn btn-ghost btn-sm" onclick="editReminderTest(${t.id})">✏️ Edit</button>
+        <button class="btn btn-danger btn-sm" onclick="deleteReminderTest(${t.id}); renderReminderHistory()">🗑️ Delete</button>
+      </div>
+    </div>
+  </div>`).join('');
+}
+
+// ============================================================
+// ===== MOCK TRACKER TOOL =====
+// ============================================================
+function getMockTests() { return JSON.parse(localStorage.getItem(LS.mockTests) || '[]'); }
+function saveMockTests(arr) { localStorage.setItem(LS.mockTests, JSON.stringify(arr)); }
+let mockChartInstance = null;
+
+document.getElementById('m-testDate').value = localDateStr();
+
+document.getElementById('m-addBtn').addEventListener('click', () => {
+  const name = document.getElementById('m-testName').value.trim();
+  const date = document.getElementById('m-testDate').value;
+  const phyS = parseFloat(document.getElementById('m-phyScore').value);
+  const phyT = parseFloat(document.getElementById('m-phyTotal').value) || 120;
+  const chemS = parseFloat(document.getElementById('m-chemScore').value);
+  const chemT = parseFloat(document.getElementById('m-chemTotal').value) || 120;
+  const mathS = parseFloat(document.getElementById('m-mathScore').value);
+  const mathT = parseFloat(document.getElementById('m-mathTotal').value) || 120;
+  if (!name || !date || isNaN(phyS) || isNaN(chemS) || isNaN(mathS)) {
+    showToast('⚠️ Saare fields bharo!'); return;
+  }
+  const total = phyS + chemS + mathS;
+  const maxTotal = phyT + chemT + mathT;
+  const pct = parseFloat(((total / maxTotal) * 100).toFixed(1));
+  const tests = getMockTests();
+  tests.push({ id: Date.now(), name, date, phy:{score:phyS,total:phyT}, chem:{score:chemS,total:chemT}, math:{score:mathS,total:mathT}, total, maxTotal, pct });
+  tests.sort((a,b) => new Date(a.date)-new Date(b.date));
+  saveMockTests(tests);
+  showToast('✅ Test saved!');
+  refreshDashboard();
+  // reset scores
+  document.getElementById('m-phyScore').value='';
+  document.getElementById('m-chemScore').value='';
+  document.getElementById('m-mathScore').value='';
+});
+
+document.getElementById('m-clearBtn').addEventListener('click', () => {
+  document.getElementById('m-testName').value='';
+  document.getElementById('m-phyScore').value='';
+  document.getElementById('m-chemScore').value='';
+  document.getElementById('m-mathScore').value='';
+});
+
+document.getElementById('mock-clear-all-btn').addEventListener('click', () => {
+  if (confirm('Saare mock tests delete karu? Wapas nahi aayenge!')) {
+    saveMockTests([]); renderMockHistory(); renderMockDashboard(); showToast('🗑️ All cleared');
+  }
+});
+
+function deleteMockTest(id) {
+  saveMockTests(getMockTests().filter(t => t.id !== id));
+  renderMockHistory(); renderMockDashboard(); showToast('🗑️ Deleted');
+}
+
+function renderMockDashboard() {
+  const tests = getMockTests();
+  const statGrid = document.getElementById('mock-stat-grid');
+  const weakGrid = document.getElementById('mock-weakness-grid');
+
+  if (!tests.length) {
+    statGrid.innerHTML = '<div class="empty-state" style="grid-column:1/-1"><div class="icon">📊</div><p>Koi mock test nahi abhi. Add Test se add karo!</p></div>';
+    weakGrid.innerHTML = '';
+    if (mockChartInstance) { mockChartInstance.destroy(); mockChartInstance = null; }
+    return;
+  }
+
+  const avgPct = (tests.reduce((s,t) => s+t.pct, 0) / tests.length).toFixed(1);
+  const best = Math.max(...tests.map(t => t.pct));
+  const latest = tests[tests.length-1];
+
+  const stats = [
+    { label:'Tests Taken', val:tests.length, color:'#7c6dfa' },
+    { label:'Avg Score', val:avgPct+'%', color:'#22d3a5' },
+    { label:'Best Score', val:best.toFixed(1)+'%', color:'#eab308' },
+    { label:'Latest Score', val:latest.pct+'%', color:'#ef4444' },
+  ];
+  statGrid.innerHTML = stats.map(s => `<div class="stat-card" style="border-top:3px solid ${s.color};padding:14px;background:var(--surface);border-radius:12px;border:1px solid var(--border);">
+    <div class="stat-label">${s.label}</div>
+    <div style="font-family:'Space Mono',monospace;font-size:1.6rem;font-weight:700;color:${s.color};">${s.val}</div>
+  </div>`).join('');
+
+  // Weakness
+  const subjects = [
+    { key:'phy', name:'Physics', color:'#60a5fa', getScore: t => (t.phy.score/t.phy.total*100) },
+    { key:'chem', name:'Chemistry', color:'#34d399', getScore: t => (t.chem.score/t.chem.total*100) },
+    { key:'math', name:'Math', color:'#f472b6', getScore: t => (t.math.score/t.math.total*100) },
+  ];
+  weakGrid.innerHTML = subjects.map(s => {
+    const avg = tests.reduce((sum,t) => sum + s.getScore(t), 0) / tests.length;
+    const level = avg >= 60 ? 'high' : avg >= 40 ? 'mid' : 'low';
+    return `<div class="weakness-card ${level}">
+      <div class="weakness-subj" style="color:${s.color}">${s.name}</div>
+      <div class="weakness-avg ${level}">${avg.toFixed(1)}%</div>
+      <div class="weakness-label">${level==='high'?'💪 Strong':level==='mid'?'⚡ Average':'⚠️ Needs Work'}</div>
+      <div class="weakness-bar"><div class="weakness-fill ${level==='high'?'fill-high':level==='mid'?'fill-mid':'fill-low'}" style="width:${avg}%"></div></div>
+    </div>`;
+  }).join('');
+
+  // Chart
+  const ctx = document.getElementById('mock-chart-canvas').getContext('2d');
+  if (mockChartInstance) mockChartInstance.destroy();
+  const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+  const gridColor = isDark ? 'rgba(255,255,255,0.05)' : 'rgba(0,0,0,0.06)';
+  const tickColor = isDark ? '#64748b' : '#94a3b8';
+  const labels = tests.map(t => new Date(t.date).toLocaleDateString('en-IN',{day:'numeric',month:'short'}));
+  const lines = [
+    { label:'Overall %', color:'#facc15', data: tests.map(t=>t.pct) },
+    { label:'Physics', color:'#60a5fa', data: tests.map(t=>+(t.phy.score/t.phy.total*100).toFixed(1)) },
+    { label:'Chemistry', color:'#34d399', data: tests.map(t=>+(t.chem.score/t.chem.total*100).toFixed(1)) },
+    { label:'Math', color:'#f472b6', data: tests.map(t=>+(t.math.score/t.math.total*100).toFixed(1)) },
+  ];
+  mockChartInstance = new Chart(ctx, {
+    type:'line',
+    data: { labels, datasets: lines.map(l => ({ label:l.label, data:l.data, borderColor:l.color, backgroundColor:'transparent', borderWidth:2.5, pointRadius:4, pointBackgroundColor:l.color, tension:0.3 })) },
+    options: { responsive:true, maintainAspectRatio:true,
+      plugins: { legend:{ display:false }, tooltip:{ backgroundColor:isDark?'#0f172a':'#fff', titleColor:isDark?'#fff':'#000', bodyColor:tickColor } },
+      scales: { x:{ grid:{color:gridColor}, ticks:{color:tickColor,font:{size:10}} }, y:{ grid:{color:gridColor}, ticks:{color:tickColor}, min:0, max:100 } }
+    }
+  });
+  document.getElementById('mock-chart-legend').innerHTML = lines.map(l =>
+    `<div style="display:flex;align-items:center;gap:5px;font-size:0.75rem;color:var(--text2)"><div style="width:10px;height:10px;border-radius:50%;background:${l.color}"></div>${l.label}</div>`
+  ).join('');
+}
+
+function renderMockHistory() {
+  const tests = getMockTests();
+  const tbody = document.getElementById('mock-history-body');
+  if (!tests.length) {
+    tbody.innerHTML = '<tr><td colspan="8" style="text-align:center;color:var(--text3);padding:30px;">Koi test nahi abhi</td></tr>';
+    return;
+  }
+  tbody.innerHTML = [...tests].reverse().map(t => {
+    const pctClass = t.pct >= 60 ? 'badge-pct-green' : t.pct >= 40 ? 'badge-pct-yellow' : 'badge-pct-red';
+    return `<tr>
+      <td>${new Date(t.date).toLocaleDateString('en-IN',{day:'2-digit',month:'short',year:'2-digit'})}</td>
+      <td><strong>${t.name}</strong></td>
+      <td>${t.phy.score}/${t.phy.total}</td>
+      <td>${t.chem.score}/${t.chem.total}</td>
+      <td>${t.math.score}/${t.math.total}</td>
+      <td>${t.total}/${t.maxTotal}</td>
+      <td><span class="badge ${pctClass}">${t.pct}%</span></td>
+      <td style="display:flex;gap:4px;">
+        <button class="btn btn-ghost btn-sm" onclick="editMockTest(${t.id})" style="padding:5px 8px;">✏️</button>
+        <button class="btn btn-danger btn-sm" onclick="deleteMockTest(${t.id})">🗑️</button>
+      </td>
+    </tr>`;
+  }).join('');
+}
+
+// ============================================================
+// ===== QUESTION TRACKER TOOL =====
+// ============================================================
+function getQueData() { return JSON.parse(localStorage.getItem(LS.queEntries) || '[]'); }
+function saveQueData(d) { localStorage.setItem(LS.queEntries, JSON.stringify(d)); }
+function getQueSources() { return JSON.parse(localStorage.getItem(LS.queSources) || '[]'); }
+function saveQueSources(s) { localStorage.setItem(LS.queSources, JSON.stringify(s)); }
+
+let queWeeklyChart = null, queMonthlyChart = null, queSubjectChart = null;
+
+function initQueForm() {
+  document.getElementById('q-datetime').value = localDateStr();
+}
+
+function handleSourceInput(inp) {
+  const val = inp.value.trim().toLowerCase();
+  const list = document.getElementById('q-autocomplete-list');
+  if (!val) { list.classList.remove('show'); return; }
+  const matches = getQueSources().filter(s => s.toLowerCase().includes(val));
+  if (!matches.length) { list.classList.remove('show'); return; }
+  list.innerHTML = matches.map(s => `<div class="autocomplete-item" onclick="selectSource('${s.replace(/'/g,"&#39;")}')">${s}</div>`).join('');
+  list.classList.add('show');
+}
+function selectSource(val) {
+  document.getElementById('q-source').value = val;
+  document.getElementById('q-autocomplete-list').classList.remove('show');
+}
+document.addEventListener('click', e => {
+  if (!e.target.closest('.autocomplete-wrap')) document.getElementById('q-autocomplete-list').classList.remove('show');
+});
+
+function saveQueEntry() {
+  const dt = document.getElementById('q-datetime').value;
+  const subj = document.getElementById('q-subject').value;
+  const src = document.getElementById('q-source').value.trim();
+  const qs = parseInt(document.getElementById('q-questions').value);
+  const notes = document.getElementById('q-notes').value.trim();
+  if (!dt || !src || !qs || qs < 1) { showToast('⚠️ Date, source aur questions bharo!'); return; }
+  const data = getQueData();
+  data.push({ id: Date.now(), dt, subject: subj, source: src, questions: qs, notes });
+  saveQueData(data);
+  const sources = getQueSources();
+  if (!sources.includes(src)) { sources.push(src); saveQueSources(sources); }
+  document.getElementById('q-source').value = '';
+  document.getElementById('q-questions').value = '';
+  document.getElementById('q-notes').value = '';
+  initQueForm();
+  showToast('✅ Entry saved!');
+  refreshDashboard();
+}
+
+function deleteQueEntry(id) {
+  saveQueData(getQueData().filter(e => e.id !== id));
+  renderQueHistory(); renderQueDashboard(); showToast('🗑️ Deleted');
+}
+
+function renderQueDashboard() {
+  const data = getQueData();
+  const grid = document.getElementById('que-stats-grid');
+  const total = data.reduce((s,e) => s+e.questions, 0);
+  const todayStr = new Date().toDateString();
+  const todayQ = data.filter(e => new Date(e.dt).toDateString() === todayStr).reduce((s,e) => s+e.questions, 0);
+  const days = new Set(data.map(e => new Date(e.dt).toDateString())).size || 1;
+  const avg = Math.round(total / days);
+  const subjects = {Physics:0, Chemistry:0, Mathematics:0};
+  data.forEach(e => { if (subjects[e.subject] !== undefined) subjects[e.subject] += e.questions; });
+  const weak = Object.entries(subjects).sort((a,b)=>a[1]-b[1])[0][0];
+
+  const statColors = ['#7c6dfa','#22d3a5','#f97316','#ef4444'];
+  const stats = [
+    { label:'Total Questions', val:total },
+    { label:"Today's Questions", val:todayQ },
+    { label:'Avg / Day', val:avg },
+    { label:'Weak Subject', val:weak.slice(0,4) },
+  ];
+  grid.innerHTML = stats.map((s,i) => `<div class="stat-card" style="border-top:3px solid ${statColors[i]};padding:14px;background:var(--surface);border-radius:12px;border:1px solid var(--border);">
+    <div class="stat-label">${s.label}</div>
+    <div style="font-family:'Space Mono',monospace;font-size:1.5rem;font-weight:700;color:${statColors[i]};">${s.val}</div>
+  </div>`).join('');
+
+  const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+  const gridColor = isDark ? 'rgba(255,255,255,0.05)' : 'rgba(0,0,0,0.06)';
+  const tickColor = isDark ? '#64748b' : '#94a3b8';
+  const chartOpts = { responsive:true, maintainAspectRatio:true,
+    plugins:{ legend:{display:false}, tooltip:{backgroundColor:isDark?'#0f172a':'#fff',titleColor:isDark?'#fff':'#000',bodyColor:tickColor} },
+    scales:{ x:{grid:{color:gridColor},ticks:{color:tickColor,font:{size:9}}}, y:{grid:{color:gridColor},ticks:{color:tickColor},beginAtZero:true} }
+  };
+
+  // Weekly
+  const wLabels=[],wVals=[];
+  for(let i=6;i>=0;i--){const d=new Date();d.setDate(d.getDate()-i);const ds=d.toDateString();wLabels.push(d.toLocaleDateString('en-IN',{weekday:'short',day:'numeric'}));wVals.push(data.filter(e=>new Date(e.dt).toDateString()===ds).reduce((s,e)=>s+e.questions,0));}
+  if (queWeeklyChart) queWeeklyChart.destroy();
+  queWeeklyChart = new Chart(document.getElementById('que-weekly-chart').getContext('2d'), {
+    type:'bar', data:{labels:wLabels,datasets:[{label:'Questions',data:wVals,backgroundColor:'rgba(99,102,241,0.7)',borderColor:'#6366f1',borderWidth:1.5,borderRadius:6,borderSkipped:false}]}, options:chartOpts
+  });
+
+  // Monthly
+  const mLabels=[],mVals=[];
+  for(let w=3;w>=0;w--){const end=new Date();end.setDate(end.getDate()-w*7);const start=new Date(end);start.setDate(start.getDate()-6);mLabels.push(start.toLocaleDateString('en-IN',{month:'short',day:'numeric'})+' – '+end.toLocaleDateString('en-IN',{day:'numeric'}));mVals.push(data.filter(e=>{const d=new Date(e.dt);return d>=start&&d<=end;}).reduce((s,e)=>s+e.questions,0));}
+  if (queMonthlyChart) queMonthlyChart.destroy();
+  queMonthlyChart = new Chart(document.getElementById('que-monthly-chart').getContext('2d'), {
+    type:'bar', data:{labels:mLabels,datasets:[{label:'Questions',data:mVals,backgroundColor:'rgba(34,211,165,0.7)',borderColor:'#22d3a5',borderWidth:1.5,borderRadius:6,borderSkipped:false}]}, options:{...chartOpts}
+  });
+
+  // Subject
+  const subjVals = [subjects.Physics,subjects.Chemistry,subjects.Mathematics];
+  const subjTotal = subjVals.reduce((a,b)=>a+b,0)||1;
+  if (queSubjectChart) queSubjectChart.destroy();
+  queSubjectChart = new Chart(document.getElementById('que-subject-chart').getContext('2d'), {
+    type:'doughnut',
+    data:{labels:['Physics','Chemistry','Mathematics'],datasets:[{data:subjVals,backgroundColor:['rgba(99,102,241,0.85)','rgba(34,211,165,0.85)','rgba(249,115,22,0.85)'],borderColor:['#6366f1','#22d3a5','#f97316'],borderWidth:2,hoverOffset:6}]},
+    options:{responsive:true,maintainAspectRatio:true,cutout:'68%',plugins:{legend:{display:false},tooltip:{backgroundColor:isDark?'#0f172a':'#fff'}}}
+  });
+  const colors=['#6366f1','#22d3a5','#f97316'];const emojis=['⚡','🧪','📐'];
+  document.getElementById('que-subject-legend').innerHTML = ['Physics','Chemistry','Mathematics'].map((s,i) =>
+    `<div style="display:flex;align-items:center;gap:8px;margin-bottom:10px;"><div style="width:10px;height:10px;border-radius:3px;background:${colors[i]};flex-shrink:0;"></div><div><div style="font-size:0.82rem;font-weight:600;">${emojis[i]} ${s}</div><div style="font-size:0.72rem;color:var(--text3);">${subjVals[i]} qs · ${Math.round(subjVals[i]/subjTotal*100)}%</div></div></div>`
+  ).join('');
+}
+
+function renderQueHistory() {
+  const data = getQueData().slice().reverse();
+  const tbody = document.getElementById('que-history-tbody');
+  const empty = document.getElementById('que-history-empty');
+  const wrap = document.getElementById('que-history-table-wrap');
+  if (!data.length) { empty.style.display='flex'; wrap.style.display='none'; return; }
+  empty.style.display='none'; wrap.style.display='block';
+  tbody.innerHTML = data.map(e => {
+    const d = new Date(e.dt);
+    const bClass = 'badge badge-' + e.subject.toLowerCase();
+    return `<tr>
+      <td style="font-size:0.82rem;">${d.toLocaleDateString('en-IN',{day:'2-digit',month:'short',year:'2-digit'})}</td>
+      <td><span class="${bClass}">${e.subject.slice(0,4)}</span></td>
+      <td>${e.source}</td>
+      <td><strong>${e.questions}</strong></td>
+      <td style="color:var(--text3);max-width:120px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">${e.notes||'—'}</td>
+      <td style="display:flex;gap:4px;">
+        <button class="btn btn-ghost btn-sm" onclick="editQueEntry(${e.id})" style="padding:5px 8px;">✏️</button>
+        <button class="btn btn-danger btn-sm" onclick="deleteQueEntry(${e.id})">🗑️</button>
+      </td>
+    </tr>`;
+  }).join('');
+}
+
+// ============================================================
+// ===== SYLLABUS TOOL =====
+// ============================================================
+const SYLLABUS_DATA = {
+  Physics: {
+    color:'#6366f1',
+    chapters: {
+      "Mechanics-1": ["Mathematical Tools","Unit and Dimension","Motion in Straight Line","Motion in Plane","NLM","Circular Motion","Work Power and Energy","COM","Rotation"],
+      "Mechanics-2": ["SHM","KTG and Thermodynamics","Mechanical Properties of Solid","Thermal Properties of Matter","Mechanical Properties of Fluids","Waves","Gravitation","Error and Measurements"],
+      "Electromagnetism": ["Electric Charges and Field","Electric Potential","Capacitance","Current Electricity","Magnetism","EMI","EM Waves","AC"],
+      "Optics": ["Ray Optics","Wave Optics"],
+      "Modern": ["Modern Physics","Semiconductor"]
+    }
+  },
+  Chemistry: {
+    color:'#22d3a5',
+    chapters: {
+      "Inorganic": ["Periodic Table","Chemical Bonding","Coordinate Compound","P Block Element","d and f Block Element","Salt Analysis","Metallurgy","S Block","Hydrogen"],
+      "Physical": ["Mole Concept","Redox Reaction","Solution","Chemical Kinetics","Thermodynamic","Chemical Equilibrium","Ionic Equilibrium","Structure of Matter","Electrochemistry","The Solid State","Status of Matter","Surface Chemistry"],
+      "Organic": ["IUPAC","GOC","Isomers","Hydrocarbon","Haloalkane and Haloarene","Alcohols Phenols And Ethers","Aldehydes Ketones And Carboxylic Acids","Amines","Biomolecules","Polymers","Chemistry in Everyday Life","Environmental Chemistry"]
+    }
+  },
+  Math: {
+    color:'#f97316',
+    chapters: {
+      "Algebra": ["Basic Math","Quadratic Equation","Sequence and Series","Complex Number-1","Complex Number-2","Permutation and Combination","Binomial Theorem","Probability","Statistics"],
+      "Coordinate Geometry": ["Straight Line","Circle","Parabola","Ellipse","Hyperbola"],
+      "Trigo": ["Trigonometry Function","Trigonometry Equation","Inverse Trigonometry Function","SOT"],
+      "Vector": ["Vector Algebra","3-D Geometry"],
+      "Calculus": ["Sets","Relation and Function","LCD","MOD","AOD","Indefinite Integration","Definite Integration","AOI","Differential Equation"]
+    }
+  }
+};
+
+function getSyllabus() { return JSON.parse(localStorage.getItem(LS.syllabus) || '{}'); }
+function saveSyllabus(d) { localStorage.setItem(LS.syllabus, JSON.stringify(d)); }
+
+function renderSyllabus() {
+  const progress = getSyllabus();
+  const grid = document.getElementById('syl-grid');
+  grid.innerHTML = Object.entries(SYLLABUS_DATA).map(([subj, data]) => {
+    const allChaps = Object.values(data.chapters).flat();
+    const done = allChaps.filter(ch => progress[subj + '__' + ch]).length;
+    const pct = allChaps.length ? Math.round(done / allChaps.length * 100) : 0;
+
+    const chapBlocks = Object.entries(data.chapters).map(([unitName, chapters]) => {
+      const unitDone = chapters.filter(ch => progress[subj + '__' + ch]).length;
+      const allDone = unitDone === chapters.length;
+      const chapId = 'chap_' + subj + '_' + unitName.replace(/\W/g,'_');
+      const items = chapters.map(ch => {
+        const key = subj + '__' + ch;
+        const checked = progress[key] ? 'checked' : '';
+        const doneClass = progress[key] ? 'completed' : '';
+        const chSafe = ch.replace(/'/g, "\\'");
+        const subjSafe = subj.replace(/'/g, "\\'");
+        return `<div class="chapter-row ${doneClass}" onclick="toggleSylChapter('${subjSafe}','${chSafe}',this)">
+          <input type="checkbox" ${checked}>
+          <span style="font-size:0.85rem;font-weight:600;">${ch}</span>
+        </div>`;
+      }).join('');
+      return `<div class="chap-block">
+        <div class="chap-header" onclick="toggleChapExpand('${chapId}',this)">
+          <div class="chap-toggle">▶</div>
+          <div class="chap-name">${unitName}</div>
+          <div class="chap-count ${allDone?'all-done':''}">${unitDone}/${chapters.length}</div>
+        </div>
+        <div class="chap-topics" id="${chapId}">${items}</div>
+      </div>`;
+    }).join('');
+
+    return `<div class="checklist-subject">
+      <div class="checklist-subject-title" style="background:linear-gradient(135deg,${data.color},${data.color}99)">
+        <span>${subj}</span>
+        <div style="text-align:right">
+          <div style="font-size:0.82rem;font-weight:700;">${done}/${allChaps.length} Done</div>
+          <div style="font-size:0.7rem;opacity:0.85">${pct}%</div>
+        </div>
+      </div>
+      <div class="subj-progress-bar"><div class="subj-progress-fill" style="width:${pct}%;background:${data.color}"></div></div>
+      <div class="checklist-items-wrap">${chapBlocks}</div>
+    </div>`;
+  }).join('');
+}
+
+function toggleChapExpand(chapId, headerEl) {
+  const el = document.getElementById(chapId);
+  if (!el) return;
+  const open = el.classList.toggle('open');
+  const arrow = headerEl.querySelector('.chap-toggle');
+  if (arrow) arrow.classList.toggle('open', open);
+}
+
+function toggleSylChapter(subj, ch, rowEl) {
+  const progress = getSyllabus();
+  const key = subj + '__' + ch;
+  const nowDone = !progress[key];
+  progress[key] = nowDone;
+  saveSyllabus(progress);
+  // In-place update — accordion band nahi hoga!
+  if (rowEl) {
+    const cb = rowEl.querySelector('input[type=checkbox]');
+    if (cb) cb.checked = nowDone;
+    rowEl.classList.toggle('completed', nowDone);
+  }
+  // Update unit count badge
+  const chapBlock = rowEl ? rowEl.closest('.chap-block') : null;
+  if (chapBlock) {
+    const allRows = chapBlock.querySelectorAll('.chapter-row');
+    const doneCount = [...allRows].filter(r => r.classList.contains('completed')).length;
+    const badge = chapBlock.querySelector('.chap-count');
+    if (badge) {
+      badge.textContent = doneCount + '/' + allRows.length;
+      badge.classList.toggle('all-done', doneCount === allRows.length);
+    }
+  }
+  // Update subject-level progress bar
+  updateSylSubjectProgress(subj);
+  refreshDashboard();
+}
+
+function updateSylSubjectProgress(subj) {
+  const progress = getSyllabus();
+  const data = SYLLABUS_DATA[subj];
+  if (!data) return;
+  const allChaps = Object.values(data.chapters).flat();
+  const done = allChaps.filter(ch => progress[subj + '__' + ch]).length;
+  const pct = allChaps.length ? Math.round(done / allChaps.length * 100) : 0;
+  // Update progress bar
+  const subjEl = [...document.querySelectorAll('.checklist-subject-title')].find(el => el.textContent.trim().startsWith(subj));
+  if (subjEl) {
+    const wrap = subjEl.closest('.checklist-subject');
+    if (wrap) {
+      const bar = wrap.querySelector('.subj-progress-fill');
+      if (bar) bar.style.width = pct + '%';
+      const countEl = wrap.querySelector('.checklist-subject-title div div:first-child');
+      if (countEl) countEl.textContent = done + '/' + allChaps.length + ' Done';
+      const pctEl = wrap.querySelector('.checklist-subject-title div div:last-child');
+      if (pctEl) pctEl.textContent = pct + '%';
+    }
+  }
+}
+
+function resetSyllabus() {
+  if (confirm('Syllabous reset karu? Sab uncheck ho jayega!')) {
+    saveSyllabus({});
+    renderSyllabus();
+    refreshDashboard();
+    showToast('🔄 Syllabus reset!');
+  }
+}
+
+// ============================================================
+// ===== DASHBOARD REFRESH =====
+// ============================================================
+let dWeeklyChart = null, dMonthlyChart = null, dSubjectChart = null, dMockChart = null, dSylChart = null;
+
+function refreshDashboard() {
+  const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+  const gridColor = isDark ? 'rgba(255,255,255,0.05)' : 'rgba(0,0,0,0.06)';
+  const tickColor = isDark ? '#64748b' : '#94a3b8';
+
+  // Stats
+  const queData = getQueData();
+  const mockTests = getMockTests();
+  const sylProgress = getSyllabus();
+  const todoDb = getTodoDb();
+  const today = localDateStr();
+
+  const totalQ = queData.reduce((s,e)=>s+e.questions,0);
+  const todayQDash = queData.filter(e=>new Date(e.dt).toDateString()===new Date().toDateString()).reduce((s,e)=>s+e.questions,0);
+  document.getElementById('d-today-q').textContent = todayQDash;
+  document.getElementById('d-total-q').textContent = totalQ;
+
+  const allChaps = Object.values(SYLLABUS_DATA).flatMap(d => Object.values(d.chapters).flat().map((ch,_,__,subj) => ch));
+  let totalChaps=0, doneChaps=0;
+  Object.entries(SYLLABUS_DATA).forEach(([subj,data]) => {
+    Object.values(data.chapters).flat().forEach(ch => {
+      totalChaps++;
+      if (sylProgress[subj+'__'+ch]) doneChaps++;
+    });
+  });
+  const sylPct = totalChaps ? Math.round(doneChaps/totalChaps*100) : 0;
+  document.getElementById('d-syl-pct').textContent = sylPct + '%';
+  document.getElementById('d-syl-sub').textContent = `${doneChaps}/${totalChaps} topics`;
+
+  const todayTargets = todoDb.tasks.filter(t => t.date <= today);
+  const todayDone = todayTargets.filter(t=>t.done).length;
+  document.getElementById('d-targets-done').textContent = todayDone;
+  document.getElementById('d-targets-sub').textContent = `/ ${todayTargets.length} targets`;
+
+  // Weekly Chart
+  const wLabels=[],wVals=[];
+  for(let i=6;i>=0;i--){const d=new Date();d.setDate(d.getDate()-i);const ds=d.toDateString();wLabels.push(d.toLocaleDateString('en-IN',{weekday:'short',day:'numeric'}));wVals.push(queData.filter(e=>new Date(e.dt).toDateString()===ds).reduce((s,e)=>s+e.questions,0));}
+  if (dWeeklyChart) dWeeklyChart.destroy();
+  dWeeklyChart = new Chart(document.getElementById('d-weekly-chart').getContext('2d'), {
+    type:'bar', data:{labels:wLabels,datasets:[{label:'Questions',data:wVals,backgroundColor:'rgba(124,109,250,0.7)',borderColor:'#7c6dfa',borderWidth:1.5,borderRadius:6,borderSkipped:false}]},
+    options:{responsive:true,maintainAspectRatio:true,plugins:{legend:{display:false},tooltip:{backgroundColor:isDark?'#0f172a':'#fff',bodyColor:tickColor}},scales:{x:{grid:{color:gridColor},ticks:{color:tickColor,font:{size:9}}},y:{grid:{color:gridColor},ticks:{color:tickColor},beginAtZero:true}}}
+  });
+
+  // Monthly Chart
+  const mLabels=[],mVals=[];
+  for(let w=3;w>=0;w--){const end=new Date();end.setDate(end.getDate()-w*7);const start=new Date(end);start.setDate(start.getDate()-6);mLabels.push(start.toLocaleDateString('en-IN',{month:'short',day:'numeric'})+' – '+end.toLocaleDateString('en-IN',{day:'numeric'}));mVals.push(queData.filter(e=>{const d=new Date(e.dt);return d>=start&&d<=end;}).reduce((s,e)=>s+e.questions,0));}
+  if (dMonthlyChart) dMonthlyChart.destroy();
+  dMonthlyChart = new Chart(document.getElementById('d-monthly-chart').getContext('2d'), {
+    type:'bar', data:{labels:mLabels,datasets:[{label:'Questions',data:mVals,backgroundColor:'rgba(34,211,165,0.7)',borderColor:'#22d3a5',borderWidth:1.5,borderRadius:6,borderSkipped:false}]},
+    options:{responsive:true,maintainAspectRatio:true,plugins:{legend:{display:false},tooltip:{backgroundColor:isDark?'#0f172a':'#fff',bodyColor:tickColor}},scales:{x:{grid:{color:gridColor},ticks:{color:tickColor,font:{size:9}}},y:{grid:{color:gridColor},ticks:{color:tickColor},beginAtZero:true}}}
+  });
+
+  // Subject Chart
+  const subjects = {Physics:0,Chemistry:0,Mathematics:0};
+  queData.forEach(e => { if(subjects[e.subject]!==undefined) subjects[e.subject]+=e.questions; });
+  const subVals=[subjects.Physics,subjects.Chemistry,subjects.Mathematics];
+  const subTotal=subVals.reduce((a,b)=>a+b,0)||1;
+  if(dSubjectChart) dSubjectChart.destroy();
+  dSubjectChart = new Chart(document.getElementById('d-subject-chart').getContext('2d'), {
+    type:'doughnut', data:{labels:['Physics','Chemistry','Mathematics'],datasets:[{data:subVals,backgroundColor:['rgba(99,102,241,0.85)','rgba(34,211,165,0.85)','rgba(249,115,22,0.85)'],borderColor:['#6366f1','#22d3a5','#f97316'],borderWidth:2,hoverOffset:6}]},
+    options:{responsive:true,maintainAspectRatio:true,cutout:'65%',plugins:{legend:{display:false}}}
+  });
+  const sc=['#6366f1','#22d3a5','#f97316'],se=['⚡','🧪','📐'];
+  document.getElementById('d-subject-legend').innerHTML=['Physics','Chemistry','Mathematics'].map((s,i)=>`<div style="display:flex;align-items:center;gap:6px;margin-bottom:6px;font-size:0.75rem;"><div style="width:8px;height:8px;border-radius:2px;background:${sc[i]}"></div><span style="color:var(--text2)">${se[i]} ${s}: ${subVals[i]} qs (${Math.round(subVals[i]/subTotal*100)}%)</span></div>`).join('');
+
+  // Mock Chart
+  if (dMockChart) dMockChart.destroy();
+  const mCtx = document.getElementById('d-mock-chart').getContext('2d');
+  if (mockTests.length) {
+    const mLabels2 = mockTests.map(t=>new Date(t.date).toLocaleDateString('en-IN',{day:'numeric',month:'short'}));
+    const mLines = [
+      {label:'Overall',color:'#facc15',data:mockTests.map(t=>t.pct)},
+      {label:'Physics',color:'#60a5fa',data:mockTests.map(t=>+(t.phy.score/t.phy.total*100).toFixed(1))},
+      {label:'Chemistry',color:'#34d399',data:mockTests.map(t=>+(t.chem.score/t.chem.total*100).toFixed(1))},
+      {label:'Math',color:'#f472b6',data:mockTests.map(t=>+(t.math.score/t.math.total*100).toFixed(1))},
+    ];
+    dMockChart = new Chart(mCtx, {
+      type:'line', data:{labels:mLabels2,datasets:mLines.map(l=>({label:l.label,data:l.data,borderColor:l.color,backgroundColor:'transparent',borderWidth:2.5,pointRadius:4,pointBackgroundColor:l.color,tension:0.3}))},
+      options:{responsive:true,maintainAspectRatio:true,plugins:{legend:{display:false},tooltip:{backgroundColor:isDark?'#0f172a':'#fff',bodyColor:tickColor}},scales:{x:{grid:{color:gridColor},ticks:{color:tickColor,font:{size:9}}},y:{grid:{color:gridColor},ticks:{color:tickColor},min:0,max:100}}}
+    });
+    document.getElementById('d-mock-legend').innerHTML = mLines.map(l=>`<div style="display:flex;align-items:center;gap:5px;font-size:0.75rem;color:var(--text2)"><div style="width:8px;height:8px;border-radius:50%;background:${l.color}"></div>${l.label}</div>`).join('');
+  } else {
+    document.getElementById('d-mock-legend').innerHTML='<span style="color:var(--text3);font-size:0.8rem;">No mock tests yet</span>';
+  }
+
+  // Syllabus Chart
+  const sylSubjects = ['Physics','Chemistry','Math'];
+  const sylColors = ['#6366f1','#22d3a5','#f97316'];
+  const sylDone = sylSubjects.map(subj => {
+    const data2 = SYLLABUS_DATA[subj];
+    if(!data2) return 0;
+    const chaps = Object.values(data2.chapters).flat();
+    return chaps.filter(ch => sylProgress[subj+'__'+ch]).length;
+  });
+  const sylTotal2 = sylSubjects.map(subj => {
+    const data2 = SYLLABUS_DATA[subj];
+    return data2 ? Object.values(data2.chapters).flat().length : 0;
+  });
+  if(dSylChart) dSylChart.destroy();
+  dSylChart = new Chart(document.getElementById('d-syl-chart').getContext('2d'), {
+    type:'bar',
+    data:{labels:sylSubjects,datasets:[{label:'Done',data:sylDone,backgroundColor:sylColors.map(c=>c+'cc'),borderColor:sylColors,borderWidth:2,borderRadius:6,borderSkipped:false},{label:'Remaining',data:sylTotal2.map((t,i)=>t-sylDone[i]),backgroundColor:'rgba(255,255,255,0.05)',borderColor:sylColors.map(c=>c+'44'),borderWidth:1,borderRadius:6,borderSkipped:false}]},
+    options:{responsive:true,maintainAspectRatio:true,plugins:{legend:{display:false},tooltip:{backgroundColor:isDark?'#0f172a':'#fff',bodyColor:tickColor}},scales:{x:{grid:{color:gridColor},ticks:{color:tickColor},stacked:true},y:{grid:{color:gridColor},ticks:{color:tickColor},stacked:true,beginAtZero:true}}}
+  });
+
+  // Target Completion % — Last 7 Days
+  const tLabels=[], tDonePcts=[];
+  for(let i=6;i>=0;i--){
+    const d=new Date(); d.setDate(d.getDate()-i);
+    const dStr=localDateStr(d);
+    tLabels.push(d.toLocaleDateString('en-IN',{weekday:'short',day:'numeric'}));
+    // Count from active tasks + archived tasks for that date
+    const db2=getTodoDb();
+    const activeTasks = db2.tasks.filter(t=>t.date===dStr);
+    let archiveTasks = [];
+    for(let m in db2.history){ if(db2.history[m][dStr]) archiveTasks.push(...db2.history[m][dStr]); }
+    const allDayTasks = [...activeTasks, ...archiveTasks];
+    const doneCnt = allDayTasks.filter(t=>t.done).length;
+    const pct = allDayTasks.length ? Math.round(doneCnt/allDayTasks.length*100) : 0;
+    tDonePcts.push(pct);
+  }
+  if(!window.dTargetChart) window.dTargetChart = null;
+  if(window.dTargetChart) window.dTargetChart.destroy();
+  window.dTargetChart = new Chart(document.getElementById('d-target-chart').getContext('2d'), {
+    type:'line',
+    data:{labels:tLabels,datasets:[{label:'Target Completion %',data:tDonePcts,borderColor:'#f59e0b',backgroundColor:'rgba(245,158,11,0.1)',borderWidth:2.5,pointRadius:5,pointBackgroundColor:'#f59e0b',fill:true,tension:0.3}]},
+    options:{responsive:true,maintainAspectRatio:true,
+      plugins:{legend:{display:false},tooltip:{backgroundColor:isDark?'#0f172a':'#fff',bodyColor:tickColor,callbacks:{label:ctx=>`${ctx.parsed.y}% done`}}},
+      scales:{x:{grid:{color:gridColor},ticks:{color:tickColor,font:{size:9}}},y:{grid:{color:gridColor},ticks:{color:tickColor,callback:v=>v+'%'},min:0,max:100}}
+    }
+  });
+
+  // Total tests stat update
+  document.getElementById('d-total-tests').textContent = mockTests.length;
+  const bestMock2 = mockTests.length ? Math.max(...mockTests.map(t=>t.pct)).toFixed(1)+'%' : '—';
+  document.getElementById('d-best-mock').textContent = bestMock2;
+  // Last test score — sorted by date descending
+  const sortedMocks = [...mockTests].sort((a,b) => new Date(b.date) - new Date(a.date));
+  const lastMock = sortedMocks[0];
+  document.getElementById('d-last-mock').textContent = lastMock ? lastMock.pct.toFixed(1)+'%' : '—';
+
+  // Insights
+  generateInsights(queData, mockTests, sylPct, todayTargets, todayDone);
+}
+
+function generateInsights(queData, mockTests, sylPct, todayTargets, todayDone) {
+  const insights = [];
+  const subjects = {Physics:0,Chemistry:0,Mathematics:0};
+  queData.forEach(e => { if(subjects[e.subject]!==undefined) subjects[e.subject]+=e.questions; });
+
+  const totalQ = queData.reduce((s,e)=>s+e.questions,0);
+  const todayQ = queData.filter(e=>new Date(e.dt).toDateString()===new Date().toDateString()).reduce((s,e)=>s+e.questions,0);
+
+  if (totalQ === 0) {
+    insights.push({cls:'warn', icon:'📝', text:'Abhi koi questions track nahi kiye. Question Tracker mein add karo!'});
+  } else {
+    const weakSubj = Object.entries(subjects).sort((a,b)=>a[1]-b[1])[0][0];
+    insights.push({cls:'warn', icon:'⚠️', text:`${weakSubj} mein sabse kam practice hai (${subjects[weakSubj]} qs). Isko improve karo!`});
+    if(todayQ < 20) insights.push({cls:'warn', icon:'📖', text:`Aaj sirf ${todayQ} questions kiye. 50+ questions daily target rakho!`});
+    else insights.push({cls:'good', icon:'💪', text:`Aaj ${todayQ} questions kiye — great work!`});
+  }
+
+  if (mockTests.length >= 2) {
+    const last2 = mockTests.slice(-2);
+    const diff = last2[1].pct - last2[0].pct;
+    if (diff > 0) insights.push({cls:'good', icon:'📈', text:`Mock score improve hua! +${diff.toFixed(1)}% last test se. Aise hi keep it up!`});
+    else if (diff < 0) insights.push({cls:'bad', icon:'📉', text:`Mock score ${Math.abs(diff).toFixed(1)}% gira. Weak areas pe focus karo.`});
+    const weakSubjMock = ['phy','chem','math'].map(k=>({k,avg:mockTests.reduce((s,t)=>s+(t[k].score/t[k].total*100),0)/mockTests.length})).sort((a,b)=>a.avg-b.avg)[0];
+    const nm = {phy:'Physics',chem:'Chemistry',math:'Math'};
+    if(weakSubjMock.avg < 50) insights.push({cls:'bad', icon:'🔴', text:`Mock mein ${nm[weakSubjMock.k]} sabse weak hai (${weakSubjMock.avg.toFixed(1)}%). Revision zaruri hai!`});
+  } else if (mockTests.length === 0) {
+    insights.push({cls:'warn', icon:'🎯', text:'Abhi tak koi mock test nahi diya. Test Reminder add karo!'});
+  }
+
+  if (sylPct < 30) insights.push({cls:'bad', icon:'📚', text:`Sirf ${sylPct}% syllabus complete hai. Speed badhao!`});
+  else if (sylPct >= 70) insights.push({cls:'good', icon:'🚀', text:`${sylPct}% syllabus complete! Revision mode on karo.`});
+
+  if (todayTargets.length > 0 && todayDone === todayTargets.length) {
+    insights.push({cls:'good', icon:'✅', text:'Aaj ke saare targets complete! Kal ka plan banao.'});
+  } else if (todayTargets.length > 0) {
+    insights.push({cls:'warn', icon:'⏳', text:`${todayTargets.length - todayDone} targets abhi baki hain aaj ke.`});
+  }
+
+  const insightEl = document.getElementById('d-insights');
+  insightEl.innerHTML = insights.map(ins => `<div class="insight-item ${ins.cls}"><span>${ins.icon}</span><span>${ins.text}</span></div>`).join('');
+}
+
+// ============================================================
+// ===== INIT =====
+// ============================================================
+// Pehle duplicate reminder tasks clean karo (old bug fix)
+(function cleanDuplicateReminderTasks() {
+  const db = getTodoDb();
+  const seen = new Set();
+  db.tasks = db.tasks.filter(t => {
+    const key = String(t.id);
+    if (seen.has(key)) return false;
+    seen.add(key);
+    return true;
+  });
+  saveTodoDb(db);
+})();
+
+archiveTodoTasks();       // 1. Pehle purane tasks archive karo
+syncReminderTestsToTodo(); // 2. Phir sirf future reminder tests sync karo
+refreshDashboard();
+
+// ============================================================
+// ===== PERIODIC TABLE =====
+// ============================================================
+const PT_ELEMENTS = [
+  [1,"H","Hydrogen",1,1,1,"H","1s<sup>1</sup>"],
+  [2,"He","Helium",4,1,18,"noble","1s<sup>2</sup>"],
+  [3,"Li","Lithium",7,2,1,"alkali","[He] 2s<sup>1</sup>"],
+  [4,"Be","Beryllium",9,2,2,"alkearth","[He] 2s<sup>2</sup>"],
+  [5,"B","Boron",11,2,13,"metalloid","[He] 2s<sup>2</sup>2p<sup>1</sup>"],
+  [6,"C","Carbon",12,2,14,"nonmetal","[He] 2s<sup>2</sup>2p<sup>2</sup>"],
+  [7,"N","Nitrogen",14,2,15,"nonmetal","[He] 2s<sup>2</sup>2p<sup>3</sup>"],
+  [8,"O","Oxygen",16,2,16,"nonmetal","[He] 2s<sup>2</sup>2p<sup>4</sup>"],
+  [9,"F","Fluorine",19,2,17,"halogen","[He] 2s<sup>2</sup>2p<sup>5</sup>"],
+  [10,"Ne","Neon",20,2,18,"noble","[He] 2s<sup>2</sup>2p<sup>6</sup>"],
+  [11,"Na","Sodium",23,3,1,"alkali","[Ne] 3s<sup>1</sup>"],
+  [12,"Mg","Magnesium",24,3,2,"alkearth","[Ne] 3s<sup>2</sup>"],
+  [13,"Al","Aluminium",27,3,13,"posttrans","[Ne] 3s<sup>2</sup>3p<sup>1</sup>"],
+  [14,"Si","Silicon",28,3,14,"metalloid","[Ne] 3s<sup>2</sup>3p<sup>2</sup>"],
+  [15,"P","Phosphorus",31,3,15,"nonmetal","[Ne] 3s<sup>2</sup>3p<sup>3</sup>"],
+  [16,"S","Sulphur",32,3,16,"nonmetal","[Ne] 3s<sup>2</sup>3p<sup>4</sup>"],
+  [17,"Cl","Chlorine",35,3,17,"halogen","[Ne] 3s<sup>2</sup>3p<sup>5</sup>"],
+  [18,"Ar","Argon",40,3,18,"noble","[Ne] 3s<sup>2</sup>3p<sup>6</sup>"],
+  [19,"K","Potassium",39,4,1,"alkali","[Ar] 4s<sup>1</sup>"],
+  [20,"Ca","Calcium",40,4,2,"alkearth","[Ar] 4s<sup>2</sup>"],
+  [21,"Sc","Scandium",45,4,3,"trans","[Ar] 3d<sup>1</sup>4s<sup>2</sup>"],
+  [22,"Ti","Titanium",48,4,4,"trans","[Ar] 3d<sup>2</sup>4s<sup>2</sup>"],
+  [23,"V","Vanadium",51,4,5,"trans","[Ar] 3d<sup>3</sup>4s<sup>2</sup>"],
+  [24,"Cr","Chromium",52,4,6,"trans","[Ar] 3d<sup>5</sup>4s<sup>1</sup>"],
+  [25,"Mn","Manganese",55,4,7,"trans","[Ar] 3d<sup>5</sup>4s<sup>2</sup>"],
+  [26,"Fe","Iron",56,4,8,"trans","[Ar] 3d<sup>6</sup>4s<sup>2</sup>"],
+  [27,"Co","Cobalt",59,4,9,"trans","[Ar] 3d<sup>7</sup>4s<sup>2</sup>"],
+  [28,"Ni","Nickel",58,4,10,"trans","[Ar] 3d<sup>8</sup>4s<sup>2</sup>"],
+  [29,"Cu","Copper",63,4,11,"trans","[Ar] 3d<sup>10</sup>4s<sup>1</sup>"],
+  [30,"Zn","Zinc",65,4,12,"trans","[Ar] 3d<sup>10</sup>4s<sup>2</sup>"],
+  [31,"Ga","Gallium",70,4,13,"posttrans","[Ar] 3d<sup>10</sup>4s<sup>2</sup>4p<sup>1</sup>"],
+  [32,"Ge","Germanium",73,4,14,"metalloid","[Ar] 3d<sup>10</sup>4s<sup>2</sup>4p<sup>2</sup>"],
+  [33,"As","Arsenic",75,4,15,"metalloid","[Ar] 3d<sup>10</sup>4s<sup>2</sup>4p<sup>3</sup>"],
+  [34,"Se","Selenium",79,4,16,"nonmetal","[Ar] 3d<sup>10</sup>4s<sup>2</sup>4p<sup>4</sup>"],
+  [35,"Br","Bromine",80,4,17,"halogen","[Ar] 3d<sup>10</sup>4s<sup>2</sup>4p<sup>5</sup>"],
+  [36,"Kr","Krypton",84,4,18,"noble","[Ar] 3d<sup>10</sup>4s<sup>2</sup>4p<sup>6</sup>"],
+  [37,"Rb","Rubidium",85,5,1,"alkali","[Kr] 5s<sup>1</sup>"],
+  [38,"Sr","Strontium",88,5,2,"alkearth","[Kr] 5s<sup>2</sup>"],
+  [39,"Y","Yttrium",89,5,3,"trans","[Kr] 4d<sup>1</sup>5s<sup>2</sup>"],
+  [40,"Zr","Zirconium",91,5,4,"trans","[Kr] 4d<sup>2</sup>5s<sup>2</sup>"],
+  [41,"Nb","Niobium",93,5,5,"trans","[Kr] 4d<sup>4</sup>5s<sup>1</sup>"],
+  [42,"Mo","Molybdenum",96,5,6,"trans","[Kr] 4d<sup>5</sup>5s<sup>1</sup>"],
+  [43,"Tc","Technetium",98,5,7,"trans","[Kr] 4d<sup>5</sup>5s<sup>2</sup>"],
+  [44,"Ru","Ruthenium",101,5,8,"trans","[Kr] 4d<sup>7</sup>5s<sup>1</sup>"],
+  [45,"Rh","Rhodium",103,5,9,"trans","[Kr] 4d<sup>8</sup>5s<sup>1</sup>"],
+  [46,"Pd","Palladium",106,5,10,"trans","[Kr] 4d<sup>10</sup>"],
+  [47,"Ag","Silver",108,5,11,"trans","[Kr] 4d<sup>10</sup>5s<sup>1</sup>"],
+  [48,"Cd","Cadmium",112,5,12,"trans","[Kr] 4d<sup>10</sup>5s<sup>2</sup>"],
+  [49,"In","Indium",115,5,13,"posttrans","[Kr] 4d<sup>10</sup>5s<sup>2</sup>5p<sup>1</sup>"],
+  [50,"Sn","Tin",119,5,14,"posttrans","[Kr] 4d<sup>10</sup>5s<sup>2</sup>5p<sup>2</sup>"],
+  [51,"Sb","Antimony",122,5,15,"metalloid","[Kr] 4d<sup>10</sup>5s<sup>2</sup>5p<sup>3</sup>"],
+  [52,"Te","Tellurium",128,5,16,"metalloid","[Kr] 4d<sup>10</sup>5s<sup>2</sup>5p<sup>4</sup>"],
+  [53,"I","Iodine",127,5,17,"halogen","[Kr] 4d<sup>10</sup>5s<sup>2</sup>5p<sup>5</sup>"],
+  [54,"Xe","Xenon",131,5,18,"noble","[Kr] 4d<sup>10</sup>5s<sup>2</sup>5p<sup>6</sup>"],
+  [55,"Cs","Caesium",133,6,1,"alkali","[Xe] 6s<sup>1</sup>"],
+  [56,"Ba","Barium",137,6,2,"alkearth","[Xe] 6s<sup>2</sup>"],
+  [57,"La","Lanthanum",139,6,3,"lant","[Xe] 5d<sup>1</sup>6s<sup>2</sup>"],
+  [58,"Ce","Cerium",140,8,4,"lant","[Xe] 4f<sup>1</sup>5d<sup>1</sup>6s<sup>2</sup>"],
+  [59,"Pr","Praseodymium",141,8,5,"lant","[Xe] 4f<sup>3</sup>6s<sup>2</sup>"],
+  [60,"Nd","Neodymium",144,8,6,"lant","[Xe] 4f<sup>4</sup>6s<sup>2</sup>"],
+  [61,"Pm","Promethium",145,8,7,"lant","[Xe] 4f<sup>5</sup>6s<sup>2</sup>"],
+  [62,"Sm","Samarium",150,8,8,"lant","[Xe] 4f<sup>6</sup>6s<sup>2</sup>"],
+  [63,"Eu","Europium",152,8,9,"lant","[Xe] 4f<sup>7</sup>6s<sup>2</sup>"],
+  [64,"Gd","Gadolinium",157,8,10,"lant","[Xe] 4f<sup>7</sup>5d<sup>1</sup>6s<sup>2</sup>"],
+  [65,"Tb","Terbium",159,8,11,"lant","[Xe] 4f<sup>9</sup>6s<sup>2</sup>"],
+  [66,"Dy","Dysprosium",163,8,12,"lant","[Xe] 4f<sup>10</sup>6s<sup>2</sup>"],
+  [67,"Ho","Holmium",165,8,13,"lant","[Xe] 4f<sup>11</sup>6s<sup>2</sup>"],
+  [68,"Er","Erbium",167,8,14,"lant","[Xe] 4f<sup>12</sup>6s<sup>2</sup>"],
+  [69,"Tm","Thulium",169,8,15,"lant","[Xe] 4f<sup>13</sup>6s<sup>2</sup>"],
+  [70,"Yb","Ytterbium",173,8,16,"lant","[Xe] 4f<sup>14</sup>6s<sup>2</sup>"],
+  [71,"Lu","Lutetium",175,8,17,"lant","[Xe] 4f<sup>14</sup>5d<sup>1</sup>6s<sup>2</sup>"],
+  [72,"Hf","Hafnium",178,6,4,"trans","[Xe] 4f<sup>14</sup>5d<sup>2</sup>6s<sup>2</sup>"],
+  [73,"Ta","Tantalum",181,6,5,"trans","[Xe] 4f<sup>14</sup>5d<sup>3</sup>6s<sup>2</sup>"],
+  [74,"W","Tungsten",184,6,6,"trans","[Xe] 4f<sup>14</sup>5d<sup>4</sup>6s<sup>2</sup>"],
+  [75,"Re","Rhenium",186,6,7,"trans","[Xe] 4f<sup>14</sup>5d<sup>5</sup>6s<sup>2</sup>"],
+  [76,"Os","Osmium",190,6,8,"trans","[Xe] 4f<sup>14</sup>5d<sup>6</sup>6s<sup>2</sup>"],
+  [77,"Ir","Iridium",192,6,9,"trans","[Xe] 4f<sup>14</sup>5d<sup>7</sup>6s<sup>2</sup>"],
+  [78,"Pt","Platinum",195,6,10,"trans","[Xe] 4f<sup>14</sup>5d<sup>9</sup>6s<sup>1</sup>"],
+  [79,"Au","Gold",197,6,11,"trans","[Xe] 4f<sup>14</sup>5d<sup>10</sup>6s<sup>1</sup>"],
+  [80,"Hg","Mercury",200,6,12,"trans","[Xe] 4f<sup>14</sup>5d<sup>10</sup>6s<sup>2</sup>"],
+  [81,"Tl","Thallium",204,6,13,"posttrans","[Xe] 4f<sup>14</sup>5d<sup>10</sup>6s<sup>2</sup>6p<sup>1</sup>"],
+  [82,"Pb","Lead",207,6,14,"posttrans","[Xe] 4f<sup>14</sup>5d<sup>10</sup>6s<sup>2</sup>6p<sup>2</sup>"],
+  [83,"Bi","Bismuth",209,6,15,"posttrans","[Xe] 4f<sup>14</sup>5d<sup>10</sup>6s<sup>2</sup>6p<sup>3</sup>"],
+  [84,"Po","Polonium",209,6,16,"posttrans","[Xe] 4f<sup>14</sup>5d<sup>10</sup>6s<sup>2</sup>6p<sup>4</sup>"],
+  [85,"At","Astatine",210,6,17,"halogen","[Xe] 4f<sup>14</sup>5d<sup>10</sup>6s<sup>2</sup>6p<sup>5</sup>"],
+  [86,"Rn","Radon",222,6,18,"noble","[Xe] 4f<sup>14</sup>5d<sup>10</sup>6s<sup>2</sup>6p<sup>6</sup>"],
+  [87,"Fr","Francium",223,7,1,"alkali","[Rn] 7s<sup>1</sup>"],
+  [88,"Ra","Radium",226,7,2,"alkearth","[Rn] 7s<sup>2</sup>"],
+  [89,"Ac","Actinium",227,7,3,"actin","[Rn] 6d<sup>1</sup>7s<sup>2</sup>"],
+  [90,"Th","Thorium",232,9,4,"actin","[Rn] 6d<sup>2</sup>7s<sup>2</sup>"],
+  [91,"Pa","Protactinium",231,9,5,"actin","[Rn] 5f<sup>2</sup>6d<sup>1</sup>7s<sup>2</sup>"],
+  [92,"U","Uranium",238,9,6,"actin","[Rn] 5f<sup>3</sup>6d<sup>1</sup>7s<sup>2</sup>"],
+  [93,"Np","Neptunium",237,9,7,"actin","[Rn] 5f<sup>4</sup>6d<sup>1</sup>7s<sup>2</sup>"],
+  [94,"Pu","Plutonium",244,9,8,"actin","[Rn] 5f<sup>6</sup>7s<sup>2</sup>"],
+  [95,"Am","Americium",243,9,9,"actin","[Rn] 5f<sup>7</sup>7s<sup>2</sup>"],
+  [96,"Cm","Curium",247,9,10,"actin","[Rn] 5f<sup>7</sup>6d<sup>1</sup>7s<sup>2</sup>"],
+  [97,"Bk","Berkelium",247,9,11,"actin","[Rn] 5f<sup>9</sup>7s<sup>2</sup>"],
+  [98,"Cf","Californium",251,9,12,"actin","[Rn] 5f<sup>10</sup>7s<sup>2</sup>"],
+  [99,"Es","Einsteinium",252,9,13,"actin","[Rn] 5f<sup>11</sup>7s<sup>2</sup>"],
+  [100,"Fm","Fermium",257,9,14,"actin","[Rn] 5f<sup>12</sup>7s<sup>2</sup>"],
+  [101,"Md","Mendelevium",258,9,15,"actin","[Rn] 5f<sup>13</sup>7s<sup>2</sup>"],
+  [102,"No","Nobelium",259,9,16,"actin","[Rn] 5f<sup>14</sup>7s<sup>2</sup>"],
+  [103,"Lr","Lawrencium",262,9,17,"actin","[Rn] 5f<sup>14</sup>7s<sup>2</sup>7p<sup>1</sup>"],
+  [104,"Rf","Rutherfordium",267,7,4,"trans","[Rn] 5f<sup>14</sup>6d<sup>2</sup>7s<sup>2</sup>"],
+  [105,"Db","Dubnium",270,7,5,"trans","[Rn] 5f<sup>14</sup>6d<sup>3</sup>7s<sup>2</sup>"],
+  [106,"Sg","Seaborgium",271,7,6,"trans","[Rn] 5f<sup>14</sup>6d<sup>4</sup>7s<sup>2</sup>"],
+  [107,"Bh","Bohrium",270,7,7,"trans","[Rn] 5f<sup>14</sup>6d<sup>5</sup>7s<sup>2</sup>"],
+  [108,"Hs","Hassium",277,7,8,"trans","[Rn] 5f<sup>14</sup>6d<sup>6</sup>7s<sup>2</sup>"],
+  [109,"Mt","Meitnerium",278,7,9,"trans","[Rn] 5f<sup>14</sup>6d<sup>7</sup>7s<sup>2</sup>"],
+  [110,"Ds","Darmstadtium",281,7,10,"trans","[Rn] 5f<sup>14</sup>6d<sup>8</sup>7s<sup>2</sup>"],
+  [111,"Rg","Roentgenium",282,7,11,"trans","[Rn] 5f<sup>14</sup>6d<sup>10</sup>7s<sup>1</sup>"],
+  [112,"Cn","Copernicium",285,7,12,"trans","[Rn] 5f<sup>14</sup>6d<sup>10</sup>7s<sup>2</sup>"],
+  [113,"Nh","Nihonium",286,7,13,"posttrans","[Rn] 5f<sup>14</sup>6d<sup>10</sup>7s<sup>2</sup>7p<sup>1</sup>"],
+  [114,"Fl","Flerovium",289,7,14,"posttrans","[Rn] 5f<sup>14</sup>6d<sup>10</sup>7s<sup>2</sup>7p<sup>2</sup>"],
+  [115,"Mc","Moscovium",290,7,15,"posttrans","[Rn] 5f<sup>14</sup>6d<sup>10</sup>7s<sup>2</sup>7p<sup>3</sup>"],
+  [116,"Lv","Livermorium",293,7,16,"posttrans","[Rn] 5f<sup>14</sup>6d<sup>10</sup>7s<sup>2</sup>7p<sup>4</sup>"],
+  [117,"Ts","Tennessine",294,7,17,"halogen","[Rn] 5f<sup>14</sup>6d<sup>10</sup>7s<sup>2</sup>7p<sup>5</sup>"],
+  [118,"Og","Oganesson",294,7,18,"noble","[Rn] 5f<sup>14</sup>6d<sup>10</sup>7s<sup>2</sup>7p<sup>6</sup>"],
+];
+
+const PT_CAT_NAMES = {
+  H:"Hydrogen", alkali:"Alkali Metal", alkearth:"Alkaline Earth Metal",
+  trans:"Transition Metal", posttrans:"Post-Transition Metal",
+  metalloid:"Metalloid", nonmetal:"Non-Metal", halogen:"Halogen",
+  noble:"Noble Gas", lant:"Lanthanide", actin:"Actinide"
+};
+const PT_CAT_COLORS = {
+  H:"#ef233c", alkali:"#ff4d6d", alkearth:"#ff9f1c",
+  trans:"#4cc9f0", posttrans:"#b67ee8", metalloid:"#06d6a0",
+  nonmetal:"#ffbe0b", halogen:"#fb5607", noble:"#8338ec",
+  lant:"#e07a5f", actin:"#f2cc8f"
+};
+
+let ptBuilt = false;
+
+function initPeriodicTable() {
+  if (ptBuilt) return;
+  ptBuilt = true;
+  const grid = document.getElementById('ptGrid');
+  grid.innerHTML = '';
+
+  // Group labels
+  for (let c = 1; c <= 18; c++) {
+    const lbl = document.createElement('div');
+    lbl.style.cssText = 'display:flex;align-items:center;justify-content:center;font-size:0.6rem;color:var(--text2);font-family:"Space Mono",monospace;';
+    lbl.style.gridColumn = c;
+    lbl.style.gridRow = 1;
+    lbl.textContent = c;
+    grid.appendChild(lbl);
+  }
+
+  // Elements
+  PT_ELEMENTS.forEach(el => {
+    const [z, sym, name, mass, row, col, cat, cfg] = el;
+    const colr = PT_CAT_COLORS[cat];
+    const div = document.createElement('div');
+    div.style.cssText = `
+      border-radius:5px; border:1px solid ${colr}; cursor:pointer;
+      position:relative; display:flex; flex-direction:column;
+      align-items:center; justify-content:center; padding:2px;
+      transition:transform 0.15s,box-shadow 0.15s;
+      background:var(--surface2); box-shadow:inset 0 0 8px ${colr}22;
+    `;
+    div.style.gridColumn = col;
+    div.style.gridRow = row + 1;
+    div.innerHTML = `
+      <span style="font-size:0.52rem;color:var(--text2);align-self:flex-start;padding-left:3px;line-height:1;">${z}</span>
+      <span style="font-family:'Space Mono',monospace;font-size:1rem;font-weight:700;line-height:1.1;color:${colr};">${sym}</span>
+      <span style="font-size:0.48rem;color:var(--text2);line-height:1;">${mass}</span>
+      <span style="font-size:0.42rem;color:var(--text3);line-height:1;white-space:nowrap;overflow:hidden;max-width:44px;text-align:center;">${name}</span>
+    `;
+    div.onmouseenter = () => { div.style.transform = 'scale(1.18)'; div.style.zIndex = '10'; div.style.boxShadow = `0 0 16px 3px ${colr}44`; };
+    div.onmouseleave = () => { div.style.transform = ''; div.style.zIndex = ''; div.style.boxShadow = `inset 0 0 8px ${colr}22`; };
+    div.onclick = () => openPTOverlay(z, sym, name, mass, row, col, cat, cfg);
+    grid.appendChild(div);
+  });
+
+  // Lanthanide/Actinide row labels
+  const lantLabel = document.createElement('div');
+  lantLabel.style.cssText = 'display:flex;align-items:center;justify-content:center;font-size:0.55rem;color:#e07a5f;font-family:"Space Mono",monospace;';
+  lantLabel.style.gridColumn = '1/4'; lantLabel.style.gridRow = '9';
+  lantLabel.textContent = '57-71 ↓'; grid.appendChild(lantLabel);
+
+  const actLabel = document.createElement('div');
+  actLabel.style.cssText = 'display:flex;align-items:center;justify-content:center;font-size:0.55rem;color:#f2cc8f;font-family:"Space Mono",monospace;';
+  actLabel.style.gridColumn = '1/4'; actLabel.style.gridRow = '10';
+  actLabel.textContent = '89-103 ↓'; grid.appendChild(actLabel);
+}
+
+function openPTOverlay(z, sym, name, mass, period, group, cat, cfg) {
+  const col = PT_CAT_COLORS[cat];
+  document.getElementById('pt-sym').textContent = sym;
+  document.getElementById('pt-sym').style.color = col;
+  document.getElementById('pt-name').textContent = name;
+  document.getElementById('pt-z').textContent = z;
+  document.getElementById('pt-m').textContent = mass;
+  document.getElementById('pt-p').textContent = period;
+  document.getElementById('pt-g').textContent = group;
+  document.getElementById('pt-config').innerHTML = cfg;
+  const badge = document.getElementById('pt-badge');
+  badge.textContent = PT_CAT_NAMES[cat];
+  badge.style.background = col + '22';
+  badge.style.color = col;
+  badge.style.border = `1px solid ${col}55`;
+  const card = document.getElementById('pt-cfg-card');
+  card.style.borderColor = col;
+  card.style.boxShadow = `0 0 60px ${col}33`;
+  const ov = document.getElementById('pt-overlay');
+  ov.style.display = 'flex';
+}
+
+function closePTOverlay() {
+  document.getElementById('pt-overlay').style.display = 'none';
+}
+
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closePTOverlay(); });
+
+// ===== CUSTOM CURSOR + TRAIL =====
+(function() {
+  const dot = document.createElement('div'); dot.id = 'sj-cursor';
+  const ring = document.createElement('div'); ring.id = 'sj-cursor-ring';
+  document.body.appendChild(dot); document.body.appendChild(ring);
+
+  let mx = 0, my = 0, rx = 0, ry = 0;
+  let cursorStyle = localStorage.getItem('sj_cursor') || 'ring';
+
+  // Trail particle configs per style
+  const trailConfigs = {
+    ring:   { count:18, colors:['#7c6dfa','#a78bfa','#c4b5fd','#6d5ce8'], size:()=>Math.random()*7+3, life:28, spread:14, gravity:-0.12, shape:'circle' },
+    dot:    { count:12, colors:['#22d3a5','#6ee7b7','#34d399','#a7f3d0'], size:()=>Math.random()*5+2, life:22, spread:10, gravity:-0.08, shape:'circle' },
+    cross:  { count:22, colors:['#ef4444','#f97316','#fbbf24','#ff6b35','#ff0000'], size:()=>Math.random()*9+4, life:35, spread:18, gravity:0.15, shape:'flame' },
+    square: { count:15, colors:['#0096c7','#00b4d8','#48cae4','#90e0ef'], size:()=>Math.random()*8+3, life:25, spread:12, gravity:-0.05, shape:'square' },
+    glow:   { count:25, colors:['#ff6b9d','#f97316','#fbbf24','#a78bfa','#22d3a5','#ef4444'], size:()=>Math.random()*10+4, life:40, spread:20, gravity:-0.18, shape:'circle' }
+  };
+
+  let particles = [];
+
+  function spawnTrail(x, y) {
+    const cfg = trailConfigs[cursorStyle];
+    if (!cfg) return;
+    const burst = Math.floor(cfg.count / 6) + 1;
+    for (let i = 0; i < burst; i++) {
+      const angle = Math.random() * Math.PI * 2;
+      const speed = Math.random() * cfg.spread * 0.3 + 1;
+      particles.push({
+        x, y,
+        vx: Math.cos(angle) * speed * 0.4,
+        vy: Math.sin(angle) * speed * 0.4 - Math.random() * 3,
+        size: cfg.size(),
+        color: cfg.colors[Math.floor(Math.random() * cfg.colors.length)],
+        life: cfg.life,
+        maxLife: cfg.life,
+        gravity: cfg.gravity,
+        shape: cfg.shape
+      });
+    }
+  }
+
+  // Canvas for trail
+  const canvas = document.createElement('canvas');
+  canvas.style.cssText = 'position:fixed;top:0;left:0;pointer-events:none;z-index:99990;';
+  canvas.width = window.innerWidth; canvas.height = window.innerHeight;
+  document.body.appendChild(canvas);
+  const ctx = canvas.getContext('2d');
+  window.addEventListener('resize', () => { canvas.width = window.innerWidth; canvas.height = window.innerHeight; });
+
+  let lastX = 0, lastY = 0;
+
+  function drawParticles() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    particles = particles.filter(p => p.life > 0);
+    for (const p of particles) {
+      const alpha = p.life / p.maxLife;
+      ctx.globalAlpha = alpha * 0.85;
+      ctx.fillStyle = p.color;
+      if (p.shape === 'flame') {
+        // teardrop flame shape
+        ctx.beginPath();
+        ctx.moveTo(p.x, p.y - p.size);
+        ctx.bezierCurveTo(p.x + p.size*0.6, p.y - p.size*0.3, p.x + p.size*0.4, p.y + p.size*0.6, p.x, p.y + p.size*0.3);
+        ctx.bezierCurveTo(p.x - p.size*0.4, p.y + p.size*0.6, p.x - p.size*0.6, p.y - p.size*0.3, p.x, p.y - p.size);
+        ctx.fill();
+      } else if (p.shape === 'square') {
+        const s = p.size * alpha;
+        ctx.fillRect(p.x - s/2, p.y - s/2, s, s);
+      } else {
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.size * alpha, 0, Math.PI * 2);
+        ctx.fill();
+        // glow style extra bloom
+        if (cursorStyle === 'glow') {
+          ctx.globalAlpha = alpha * 0.25;
+          ctx.beginPath();
+          ctx.arc(p.x, p.y, p.size * alpha * 2.5, 0, Math.PI * 2);
+          ctx.fill();
+        }
+      }
+      p.x += p.vx;
+      p.y += p.vy;
+      p.vy += p.gravity;
+      p.vx *= 0.97;
+      p.life--;
+    }
+    ctx.globalAlpha = 1;
+    requestAnimationFrame(drawParticles);
+  }
+  drawParticles();
+
+  document.addEventListener('mousemove', e => {
+    mx = e.clientX; my = e.clientY;
+    dot.style.left = mx + 'px'; dot.style.top = my + 'px';
+    const dist = Math.hypot(mx - lastX, my - lastY);
+    if (dist > 3) { spawnTrail(mx, my); lastX = mx; lastY = my; }
+  });
+
+  (function animRing() {
+    rx += (mx - rx) * 0.13;
+    ry += (my - ry) * 0.13;
+    ring.style.left = rx + 'px'; ring.style.top = ry + 'px';
+    requestAnimationFrame(animRing);
+  })();
+
+  document.addEventListener('mouseover', e => {
+    const el = e.target.closest('a,button,[onclick],.stat-card,.theme-btn,.main-nav-btn,.chart-card');
+    if (el) { dot.classList.add('hovered'); ring.classList.add('hovered'); }
+    else { dot.classList.remove('hovered'); ring.classList.remove('hovered'); }
+  });
+
+  // cursor picker
+  document.body.setAttribute('data-cursor', cursorStyle);
+  document.querySelectorAll('.cursor-option').forEach(o => {
+    o.classList.toggle('active', o.dataset.cursor === cursorStyle);
+  });
+
+  const cursorBtn = document.getElementById('cursorBtn');
+  const cursorPicker = document.getElementById('cursorPicker');
+  cursorBtn.addEventListener('click', e => { e.stopPropagation(); cursorPicker.classList.toggle('open'); });
+  document.addEventListener('click', () => cursorPicker.classList.remove('open'));
+
+  document.querySelectorAll('.cursor-option').forEach(opt => {
+    opt.addEventListener('click', () => {
+      cursorStyle = opt.dataset.cursor;
+      document.body.setAttribute('data-cursor', cursorStyle);
+      localStorage.setItem('sj_cursor', cursorStyle);
+      document.querySelectorAll('.cursor-option').forEach(o => o.classList.remove('active'));
+      opt.classList.add('active');
+      cursorPicker.classList.remove('open');
+      particles = [];
+    });
+  });
+})();
+
+// ═══════════════════════════════════════
+//  ERROR LOG// Error log tab rendering — hooked via onclick directly
+
+// ============================================================
+// ===== POMODORO TIMER =====
+// ============================================================
+const POMO_LS      = 'sahu_jee_pomo_v1';
+const POMO_HIST_LS = 'sahu_jee_pomo_hist_v1';
+
+
+
+// ═══════════════════════════════════════
+//  TIMER — Manual Session Add
+// ═══════════════════════════════════════
+function pomoAddManualSession() {
+  const name = document.getElementById('pomo-manual-name')?.value.trim();
+  const mins = parseInt(document.getElementById('pomo-manual-mins')?.value) || 0;
+  const date = document.getElementById('pomo-manual-date')?.value;
+  const type = document.getElementById('pomo-manual-type')?.value || 'focus';
+
+  if (!name) { showToast && showToast('Session ka naam daalo!'); return; }
+  if (mins < 1) { showToast && showToast('Duration 1 minute se zyada hona chahiye!'); return; }
+  if (!date) { showToast && showToast('Date select karo!'); return; }
+
+  // Load existing pomo data and add manual entry
+  const data = pomoLoadData ? pomoLoadData() : 
+    JSON.parse(localStorage.getItem('jeePomoData') || '{}');
+  
+  if (!data[date]) data[date] = { sessions: [], focusMins: 0, breakMins: 0 };
+  
+  data[date].sessions.push({
+    id: Date.now(),
+    name: name,
+    mins: mins,
+    type: type,
+    manual: true,  // flag — timer se nahi, manually add kiya
+    time: new Date().toTimeString().split(' ')[0]
+  });
+  
+  // Add to focusMins count
+  data[date].focusMins = (data[date].focusMins || 0) + mins;
+  
+  localStorage.setItem('jeePomoData', JSON.stringify(data));
+
+  // Clear form
+  document.getElementById('pomo-manual-name').value = '';
+  document.getElementById('pomo-manual-mins').value = '25';
+
+  showToast && showToast('✅ Session history mein add ho gaya!');
+  pomoRenderHistory && pomoRenderHistory();
+}
+
+// Init manual date when history section opens — no override needed
+
+</script>
+</body>
+</html>
+<script>
+// ===== ANIMATED BG: STARS + GRID =====
+(function() {
+  const canvas = document.getElementById('sj-bg-canvas');
+  const ctx = canvas.getContext('2d');
+
+  function resize() { canvas.width = window.innerWidth; canvas.height = window.innerHeight; }
+  resize();
+  window.addEventListener('resize', resize);
+
+  // Stars
+  const STAR_COUNT = 120;
+  const stars = Array.from({length: STAR_COUNT}, () => ({
+    x: Math.random() * window.innerWidth,
+    y: Math.random() * window.innerHeight,
+    r: Math.random() * 1.5 + 0.3,
+    speed: Math.random() * 0.15 + 0.05,
+    twinkle: Math.random() * Math.PI * 2,
+    twinkleSpeed: Math.random() * 0.03 + 0.01
+  }));
+
+  // Grid
+  const GRID_SIZE = 60;
+  let gridOffset = 0;
+
+  function getAccentColor() {
+    return getComputedStyle(document.documentElement).getPropertyValue('--accent').trim() || '#7c6dfa';
+  }
+
+  function hexToRgb(hex) {
+    hex = hex.replace('#','');
+    if (hex.length === 3) hex = hex.split('').map(c=>c+c).join('');
+    const n = parseInt(hex,16);
+    return [(n>>16)&255,(n>>8)&255,n&255];
+  }
+
+  function draw() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    const accent = getAccentColor();
+    const [r,g,b] = hexToRgb(accent);
+
+    // Draw scrolling grid
+    gridOffset = (gridOffset + 0.3) % GRID_SIZE;
+    ctx.strokeStyle = `rgba(${r},${g},${b},0.07)`;
+    ctx.lineWidth = 0.5;
+    ctx.beginPath();
+    for (let x = -GRID_SIZE + (gridOffset % GRID_SIZE); x < canvas.width + GRID_SIZE; x += GRID_SIZE) {
+      ctx.moveTo(x, 0); ctx.lineTo(x, canvas.height);
+    }
+    for (let y = -GRID_SIZE + (gridOffset % GRID_SIZE); y < canvas.height + GRID_SIZE; y += GRID_SIZE) {
+      ctx.moveTo(0, y); ctx.lineTo(canvas.width, y);
+    }
+    ctx.stroke();
+
+    // Draw stars
+    stars.forEach(s => {
+      s.twinkle += s.twinkleSpeed;
+      const alpha = 0.4 + Math.sin(s.twinkle) * 0.35;
+      const radius = s.r * (0.8 + Math.sin(s.twinkle) * 0.3);
+      ctx.beginPath();
+      ctx.arc(s.x, s.y, radius, 0, Math.PI * 2);
+      ctx.fillStyle = `rgba(${r},${g},${b},${alpha})`;
+      ctx.fill();
+      // small glow
+      ctx.beginPath();
+      ctx.arc(s.x, s.y, radius * 2.5, 0, Math.PI * 2);
+      ctx.fillStyle = `rgba(${r},${g},${b},${alpha * 0.15})`;
+      ctx.fill();
+
+      s.y -= s.speed;
+      if (s.y < -5) { s.y = canvas.height + 5; s.x = Math.random() * canvas.width; }
+    });
+
+    requestAnimationFrame(draw);
+  }
+  draw();
+})();
+</script>
